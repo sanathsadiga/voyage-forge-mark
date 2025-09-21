@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import type { ReactElement } from "react";
+import { useState } from "react";
 
 // SVG Icons for pricing features
 const CheckIcon = (): ReactElement => (
@@ -24,7 +25,10 @@ const ZapIcon = (): ReactElement => (
 
 interface PricingPlan {
   name: string;
-  price: string;
+  price: {
+    usd: number;
+    inr: number;
+  };
   period: string;
   description: string;
   features: string[];
@@ -38,7 +42,7 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: "Plus",
-    price: "$29",
+    price: { usd: 29, inr: 2400 },
     period: "/month",
     description: "Perfect for individual travel content creators and small agencies",
     features: [
@@ -57,7 +61,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Plus + Booking Engine",
-    price: "$79",
+    price: { usd: 79, inr: 6500 },
     period: "/month",
     description: "Enhanced with integrated booking capabilities for tour operators",
     features: [
@@ -80,7 +84,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Pro Plan",
-    price: "$149",
+    price: { usd: 149, inr: 12300 },
     period: "/month",
     description: "Complete solution for large agencies and tour operators",
     features: [
@@ -106,10 +110,19 @@ const pricingPlans: PricingPlan[] = [
 interface PricingCardProps {
   plan: PricingPlan;
   index: number;
+  currency: 'usd' | 'inr';
 }
 
-const PricingCard = ({ plan, index }: PricingCardProps): ReactElement => {
+const PricingCard = ({ plan, index, currency }: PricingCardProps): ReactElement => {
   const Icon = plan.icon;
+  
+  const formatPrice = (price: { usd: number; inr: number }) => {
+    if (currency === 'usd') {
+      return `$${price.usd}`;
+    } else {
+      return `₹${price.inr}`;
+    }
+  };
   
   return (
     <motion.div
@@ -148,7 +161,7 @@ const PricingCard = ({ plan, index }: PricingCardProps): ReactElement => {
           <span className={`text-5xl font-bold ${
             plan.highlighted ? 'text-amber-400' : 'text-white'
           }`}>
-            {plan.price}
+            {formatPrice(plan.price)}
           </span>
           <span className="text-gray-400 text-lg">{plan.period}</span>
         </div>
@@ -193,6 +206,8 @@ const PricingCard = ({ plan, index }: PricingCardProps): ReactElement => {
 };
 
 export default function PricingSection(): ReactElement {
+  const [currency, setCurrency] = useState<'usd' | 'inr'>('usd');
+
   return (
     <section 
       className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden"
@@ -210,7 +225,7 @@ export default function PricingSection(): ReactElement {
         <div className="absolute bottom-1/3 right-1/5 w-1.5 h-1.5 bg-purple-400/50 rounded-full animate-ping" style={{animationDelay: '2s'}} />
         <div className="absolute top-2/3 left-3/4 w-1 h-1 bg-cyan-400/60 rounded-full animate-ping" style={{animationDelay: '4s'}} />
       </div>
-      
+
       <div className="relative z-10 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -242,15 +257,45 @@ export default function PricingSection(): ReactElement {
           >
             Choose the perfect plan for your travel business. All plans include our core AI-powered content creation tools with no hidden fees.
           </motion.p>
+
+          {/* Currency Switcher */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex items-center justify-center mt-8 mb-8"
+          >
+            <div className="flex items-center bg-slate-800/50 backdrop-blur-lg rounded-2xl p-2 border border-white/10">
+              <button
+                onClick={() => setCurrency('usd')}
+                className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
+                  currency === 'usd'
+                    ? 'bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                USD ($)
+              </button>
+              <button
+                onClick={() => setCurrency('inr')}
+                className={`px-4 py-2 rounded-xl font-semibold transition-all duration-300 ${
+                  currency === 'inr'
+                    ? 'bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                INR (₹)
+              </button>
+            </div>
+          </motion.div>
         </motion.div>
         
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
           {pricingPlans.map((plan, index) => (
-            <PricingCard key={plan.name} plan={plan} index={index} />
+            <PricingCard key={plan.name} plan={plan} index={index} currency={currency} />
           ))}
-        </div>
-        
-        <motion.div
+        </div>        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}

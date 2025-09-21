@@ -230,25 +230,26 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               {[
-                { label: "Features", action: () => go("features") },
-                { label: "Pricing", action: () => go("waitlist") },
-                { label: "Waitlist", action: () => go("waitlist") },
+                { label: "Features", href:"/features" },
+                { label: "Pricing", href: "/pricing" },
+                { label: "Waitlist", href: "/waitlist" },
               ].map((item, index) => (
                 <motion.li
                   key={item.label}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.6 + index * 0.1, duration: 0.6 }}
+                  transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <motion.button
-                    whileHover={{ x: 4 }}
-                    onClick={item.action}
-                    className="group text-slate-300/80 hover:text-white transition-colors duration-300 flex items-center gap-2"
-                  >
-                    <span className="w-1 h-1 bg-slate-400 rounded-full group-hover:bg-amber-400 transition-colors duration-300"></span>
-                    {item.label}
-                  </motion.button>
+                  <motion.div whileHover={{ x: 4 }}>
+                    <Link
+                      href={item.href}
+                      className="group text-slate-300/80 hover:text-white transition-colors duration-300 flex items-center gap-2"
+                    >
+                      <span className="w-1 h-1 bg-slate-400 rounded-full group-hover:bg-emerald-400 transition-colors duration-300"></span>
+                      {item.label}
+                    </Link>
+                  </motion.div>
                 </motion.li>
               ))}
             </ul>

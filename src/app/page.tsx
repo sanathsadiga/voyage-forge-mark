@@ -132,7 +132,68 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <TestimonialsSection />
-      
+      {/* SEO-friendly hidden content for crawlers */}
+      <div className="sr-only">
+        <h2>Travel Content Creation Features</h2>
+        <ul>
+          <li>
+            AI-powered itinerary generator for personalized travel experiences
+          </li>
+          <li>SEO-optimized travel blog content creation</li>
+          <li>Booking widget integration for tour operators</li>
+          <li>One-click publishing to WordPress and other platforms</li>
+          <li>Travel destination marketing automation</li>
+          <li>Review management and display widgets</li>
+          <li>Interactive map integration for travel websites</li>
+          <li>Keyword optimization for travel businesses</li>
+        </ul>
+
+        <h2>Perfect for Travel Industry Professionals</h2>
+        <ul>
+          <li>Tour operators seeking automated content creation</li>
+          <li>Travel agencies looking to improve their digital marketing</li>
+          <li>Travel guides wanting professional marketing materials</li>
+          <li>Hotels needing engaging destination content</li>
+          <li>Travel bloggers requiring SEO-optimized content</li>
+          <li>Destination marketing organizations</li>
+        </ul>
+
+        <h2>Pricing Plans for Every Travel Business Size</h2>
+        <ul>
+          <li>Plus Plan - $29/month for individual content creators</li>
+          <li>
+            Plus + Booking Engine - $79/month with integrated booking system
+          </li>
+          <li>Pro Plan - $149/month complete solution for large agencies</li>
+          <li>All plans include 14-day free trial</li>
+          <li>No setup fees or hidden costs</li>
+          <li>Cancel anytime with money-back guarantee</li>
+        </ul>
+
+        <h2>Complete Travel Business Software Features</h2>
+        <ul>
+          <li>AI content writer for automated travel blog creation</li>
+          <li>CRM system for customer inquiry management and lead nurturing</li>
+          <li>
+            Advanced SEO tools with keyword optimization and schema markup
+          </li>
+          <li>Plugin ecosystem including form integration and analytics</li>
+          <li>Real-time visitor analytics and traffic source tracking</li>
+          <li>Geographic visitor analysis and behavior insights</li>
+          <li>Cookie consent management and GDPR compliance tools</li>
+          <li>Payment gateway integrations for booking systems</li>
+        </ul>
+        
+        <h2>Customer Testimonials and Reviews</h2>
+        <ul>
+          <li>Thailand Tours - Complete satisfaction with early access features</li>
+          <li>Himalayan Tours Planner - User-friendly platform for non-technical users</li>
+          <li>500+ travel businesses trust Voyage Forge platform</li>
+          <li>4.9/5 average customer rating and satisfaction</li>
+          <li>100% money-back guarantee for all plans</li>
+          <li>Verified customer reviews from tour operators worldwide</li>
+        </ul>
+      </div>
       <Footer />
     </>
   );

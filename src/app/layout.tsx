@@ -1,5 +1,15 @@
 import "./global.css";
 import type { ReactNode } from "react"; // import type
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://voyageforge.com'),
+  title: {
+    default: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
+    template: '%s | Voyage Forge'
+  },
+  description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides. Create compelling travel content that converts.',
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
