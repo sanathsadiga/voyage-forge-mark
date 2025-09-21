@@ -64,7 +64,7 @@ export default function Header() {
                   alt="Voyage Forge Logo"
                   width={180}
                   height={180}
-                  className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

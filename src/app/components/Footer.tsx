@@ -26,16 +26,25 @@ export default function Footer() {
           <div className="absolute -left-12 top-1/4 w-96 h-96 bg-gradient-to-r from-amber-400/8 to-orange-400/8 rounded-full blur-3xl animate-pulse" />
           <div className="absolute right-6 bottom-1/4 w-[32rem] h-80 bg-gradient-to-l from-purple-500/8 to-indigo-600/8 rounded-full blur-3xl" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-cyan-400/4 to-blue-500/4 rounded-full blur-3xl" />
-          
+
           {/* Floating particles */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-amber-400/40 rounded-full animate-ping" style={{animationDelay: '0s'}} />
-          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-purple-400/60 rounded-full animate-ping" style={{animationDelay: '1s'}} />
-          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-cyan-400/50 rounded-full animate-ping" style={{animationDelay: '2s'}} />
+          <div
+            className="absolute top-1/4 left-1/4 w-2 h-2 bg-amber-400/40 rounded-full animate-ping"
+            style={{ animationDelay: "0s" }}
+          />
+          <div
+            className="absolute top-3/4 right-1/3 w-1 h-1 bg-purple-400/60 rounded-full animate-ping"
+            style={{ animationDelay: "1s" }}
+          />
+          <div
+            className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-cyan-400/50 rounded-full animate-ping"
+            style={{ animationDelay: "2s" }}
+          />
         </div>
       </div>
 
       {/* Top CTA section with modern design */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -44,7 +53,7 @@ export default function Footer() {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
@@ -53,7 +62,7 @@ export default function Footer() {
             >
               Ready to Transform Your Travel Business?
             </motion.h3>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
@@ -62,7 +71,7 @@ export default function Footer() {
             >
               Join 2,500+ travel professionals creating stunning content with AI
             </motion.p>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
@@ -108,14 +117,14 @@ export default function Footer() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
           {/* Brand section */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="flex items-center gap-3 mb-6"
             >
@@ -125,7 +134,7 @@ export default function Footer() {
                   alt="Voyage Forge Logo"
                   width={48}
                   height={48}
-                  className="h-12 w-auto object-contain"
+                  className="h-17 w-auto object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-400/20 to-orange-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
@@ -133,54 +142,59 @@ export default function Footer() {
                 Voyage Forge
               </span>
             </motion.div>
-            
+
             <p className="text-lg text-slate-200/80 mb-8 leading-relaxed">
-              AI-powered travel content creation platform that helps tour operators, agencies, and guides 
-              <span className="text-amber-200 font-medium"> build stunning websites in minutes</span>.
+              AI-powered travel content creation platform that helps tour
+              operators, agencies, and guides
+              <span className="text-amber-200 font-medium">
+                {" "}
+                build stunning websites in minutes
+              </span>
+              .
             </p>
 
             {/* Enhanced social links */}
             <div className="flex gap-4">
               {[
-                { 
-                  href: "https://twitter.com/", 
-                  label: "Twitter", 
+                {
+                  href: "https://twitter.com/",
+                  label: "Twitter",
                   icon: TwitterIcon,
                   gradient: "from-blue-500/20 to-cyan-500/20",
                   border: "border-blue-400/30",
-                  hover: "hover:border-blue-400/60"
+                  hover: "hover:border-blue-400/60",
                 },
-                { 
-                  href: "https://www.linkedin.com/company/voyage-forge/", 
-                  label: "LinkedIn", 
+                {
+                  href: "https://www.linkedin.com/company/voyage-forge/",
+                  label: "LinkedIn",
                   icon: LinkedInIcon,
                   gradient: "from-blue-600/20 to-blue-800/20",
                   border: "border-blue-500/30",
-                  hover: "hover:border-blue-500/60"
+                  hover: "hover:border-blue-500/60",
                 },
-                { 
-                  href: "https://www.instagram.com/voyageforgetravelcms/", 
-                  label: "Instagram", 
+                {
+                  href: "https://www.instagram.com/voyageforgetravelcms/",
+                  label: "Instagram",
                   icon: InstagramIcon,
                   gradient: "from-pink-500/20 to-purple-500/20",
                   border: "border-pink-400/30",
-                  hover: "hover:border-pink-400/60"
+                  hover: "hover:border-pink-400/60",
                 },
-                { 
-                  href: "https://www.facebook.com/profile.php?id=61579234916851", 
-                  label: "Facebook", 
+                {
+                  href: "https://www.facebook.com/profile.php?id=61579234916851",
+                  label: "Facebook",
                   icon: FacebookIcon,
                   gradient: "from-blue-500/20 to-indigo-500/20",
                   border: "border-blue-400/30",
-                  hover: "hover:border-blue-400/60"
+                  hover: "hover:border-blue-400/60",
                 },
-                { 
-                  href: "mailto:founder@voyage-forge.com", 
-                  label: "Email", 
+                {
+                  href: "mailto:founder@voyage-forge.com",
+                  label: "Email",
                   icon: EmailIcon,
                   gradient: "from-amber-500/20 to-orange-500/20",
                   border: "border-amber-400/30",
-                  hover: "hover:border-amber-400/60"
+                  hover: "hover:border-amber-400/60",
                 },
               ].map((social, index) => (
                 <motion.a
@@ -204,7 +218,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Navigation columns */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -240,7 +254,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -276,7 +290,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -322,7 +336,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
@@ -330,14 +344,14 @@ export default function Footer() {
           className="mt-16 pt-8 border-t border-white/10"
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <motion.p 
+            <motion.p
               whileHover={{ scale: 1.02 }}
               className="text-slate-300/80 text-sm flex items-center gap-2"
             >
               <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
               © {new Date().getFullYear()} Voyage Forge. All rights reserved.
             </motion.p>
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02 }}
               className="flex items-center gap-2 text-sm text-slate-400/80"
             >
