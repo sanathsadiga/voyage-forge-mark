@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative mt-24 text-white overflow-hidden">
+    <footer className="relative text-white overflow-hidden">
       {/* Enhanced background with same theme as hero */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950">
         {/* Background orbs and effects */}

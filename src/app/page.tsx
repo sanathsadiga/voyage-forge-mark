@@ -3,25 +3,38 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import FeaturesSection from "./components/FeaturesSection";
+import FeatureCardsSection from "./components/FeatureCardsSection";
+import PricingSection from "./components/PricingSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 import type { Metadata } from "next";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "Voyage Forge - AI-Powered Travel Content Creation Platform | SEO-Optimized Travel Marketing",
-  description: "Create stunning, high-converting travel content instantly with Voyage Forge. Generate SEO-optimized itineraries, booking widgets, and travel marketing materials in minutes. Perfect for tour operators, travel agencies, and travel guides.",
+  title:
+    "Voyage Forge - AI Travel Platform | Trusted by 500+ Travel Businesses",
+  description:
+    "Complete travel business platform with AI content writer, CRM inquiry handling, advanced SEO tools, plugin integrations, and comprehensive analytics. Trusted by tour operators worldwide with 4.9/5 rating.",
   keywords: [
-    "travel content creation",
-    "AI travel content",
-    "SEO travel marketing",
-    "travel website builder",
-    "itinerary generator",
-    "travel booking widgets",
-    "tour operator marketing",
-    "travel agency tools",
-    "destination marketing",
-    "travel SEO optimization",
-    "automated travel content",
-    "travel content management"
+    "travel content creation pricing",
+    "AI travel content plans",
+    "travel CRM software",
+    "travel SEO tools",
+    "travel analytics platform",
+    "travel website builder cost",
+    "itinerary generator pricing",
+    "travel booking widgets plans",
+    "tour operator marketing pricing",
+    "travel agency tools cost",
+    "destination marketing pricing",
+    "travel SEO optimization plans",
+    "automated travel content pricing",
+    "travel content management cost",
+    "booking engine pricing",
+    "travel business software plans",
+    "travel plugin integrations",
+    "visitor tracking travel sites",
+    "travel industry testimonials",
+    "tour operator reviews",
   ],
   authors: [{ name: "Voyage Forge" }],
   creator: "Voyage Forge",
@@ -36,8 +49,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Voyage Forge - AI-Powered Travel Content Creation Platform",
-    description: "Create stunning, high-converting travel content instantly. Generate SEO-optimized itineraries, booking widgets, and travel marketing materials in minutes.",
+    title: "Voyage Forge - Trusted AI Travel Platform | 500+ Businesses",
+    description:
+      "AI content creation, CRM, SEO tools, analytics & plugins for travel businesses. Trusted by 500+ companies with 4.9/5 rating. Plans starting at $29/mo.",
     url: "https://voyageforge.com",
     siteName: "Voyage Forge",
     images: [
@@ -45,7 +59,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Voyage Forge - AI Travel Content Creation Platform",
+        alt: "Voyage Forge - Trusted Complete AI Travel Business Platform",
       },
     ],
     locale: "en_US",
@@ -53,8 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voyage Forge - AI-Powered Travel Content Creation Platform",
-    description: "Create stunning, high-converting travel content instantly. Generate SEO-optimized itineraries, booking widgets, and travel marketing materials in minutes.",
+    title: "Voyage Forge - Trusted AI Travel Platform | 4.9/5 Rating",
+    description:
+      "AI content creation, CRM, SEO tools & analytics for travel businesses. Trusted by 500+ companies with 4.9/5 rating.",
     images: ["/twitter-image.jpg"],
     creator: "@voyageforge",
   },
@@ -87,11 +102,20 @@ export default function Home() {
           <div className="absolute right-6 bottom-6 w-[32rem] h-80 bg-gradient-to-l from-purple-500/8 to-indigo-600/8 rounded-full blur-3xl" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-cyan-400/4 to-blue-500/4 rounded-full blur-3xl" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%),radial-gradient(circle_at_80%_20%,rgba(255,237,74,0.08),transparent_50%),radial-gradient(circle_at_40%_40%,rgba(139,92,246,0.06),transparent_50%)]" />
-          
+
           {/* Floating particles */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-amber-400/40 rounded-full animate-ping" style={{animationDelay: '0s'}} />
-          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-purple-400/60 rounded-full animate-ping" style={{animationDelay: '1s'}} />
-          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-cyan-400/50 rounded-full animate-ping" style={{animationDelay: '2s'}} />
+          <div
+            className="absolute top-1/4 left-1/4 w-2 h-2 bg-amber-400/40 rounded-full animate-ping"
+            style={{ animationDelay: "0s" }}
+          />
+          <div
+            className="absolute top-3/4 right-1/3 w-1 h-1 bg-purple-400/60 rounded-full animate-ping"
+            style={{ animationDelay: "1s" }}
+          />
+          <div
+            className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-cyan-400/50 rounded-full animate-ping"
+            style={{ animationDelay: "2s" }}
+          />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
@@ -100,31 +124,15 @@ export default function Home() {
         </div>
       </main>
 
-      {/* SEO-friendly hidden content for crawlers */}
-      <div className="sr-only">
-        <h2>Travel Content Creation Features</h2>
-        <ul>
-          <li>AI-powered itinerary generator for personalized travel experiences</li>
-          <li>SEO-optimized travel blog content creation</li>
-          <li>Booking widget integration for tour operators</li>
-          <li>One-click publishing to WordPress and other platforms</li>
-          <li>Travel destination marketing automation</li>
-          <li>Review management and display widgets</li>
-          <li>Interactive map integration for travel websites</li>
-          <li>Keyword optimization for travel businesses</li>
-        </ul>
-        
-        <h2>Perfect for Travel Industry Professionals</h2>
-        <ul>
-          <li>Tour operators seeking automated content creation</li>
-          <li>Travel agencies looking to improve their digital marketing</li>
-          <li>Travel guides wanting professional marketing materials</li>
-          <li>Hotels needing engaging destination content</li>
-          <li>Travel bloggers requiring SEO-optimized content</li>
-          <li>Destination marketing organizations</li>
-        </ul>
-      </div>
+      {/* Feature Cards Section */}
+      <FeatureCardsSection />
 
+      {/* Pricing Section */}
+      <PricingSection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+      
       <Footer />
     </>
   );
