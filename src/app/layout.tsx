@@ -9,6 +9,72 @@ export const metadata: Metadata = {
     template: '%s | Voyage Forge'
   },
   description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides. Create compelling travel content that converts.',
+  keywords: [
+    'AI travel content',
+    'travel platform',
+    'travel technology',
+    'content creation',
+    'travel marketing',
+    'tourism automation',
+    'travel SEO',
+    'AI writing tools',
+    'travel business software',
+    'voyage forge'
+  ],
+  authors: [{ name: 'Voyage Forge Team' }],
+  creator: 'Voyage Forge',
+  publisher: 'Voyage Forge',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://voyageforge.com',
+    siteName: 'Voyage Forge',
+    title: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
+    description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides. Create compelling travel content that converts.',
+    images: [
+      {
+        url: '/api/og?title=Voyage%20Forge&description=AI-Powered%20Travel%20Platform',
+        width: 1200,
+        height: 630,
+        alt: 'Voyage Forge - AI-Powered Travel Platform',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@voyageforge',
+    creator: '@voyageforge',
+    title: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
+    description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides.',
+    images: ['/api/og?title=Voyage%20Forge&description=AI-Powered%20Travel%20Platform'],
+  },
+  verification: {
+    google: 'your-google-verification-code', // Replace with actual verification code
+    // yandex: 'your-yandex-verification-code',
+    // bing: 'your-bing-verification-code',
+  },
+  alternates: {
+    canonical: 'https://voyageforge.com',
+    types: {
+      'application/rss+xml': [
+        {
+          url: '/blog/rss.xml',
+          title: 'Voyage Forge Blog RSS Feed',
+        },
+      ],
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

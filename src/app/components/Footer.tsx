@@ -226,7 +226,7 @@ export default function Footer() {
           >
             <h4 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-amber-400 rounded-full"></span>
-              Product
+              Products
             </h4>
             <ul className="space-y-4">
               {[
