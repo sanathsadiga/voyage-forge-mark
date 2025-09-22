@@ -82,7 +82,7 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Sanath Sadiga",
+    name: "Sanath",
     role: "Founder & CEO",
     bio: "Former travel agency owner turned tech entrepreneur with 10+ years in the travel industry. Passionate about bridging the gap between technology and travel experiences.",
     expertise: ["Travel Industry", "Business Strategy", "Product Vision", "AI Innovation"],
