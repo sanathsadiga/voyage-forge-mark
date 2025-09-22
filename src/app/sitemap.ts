@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '../data/blogPosts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://voyageforge.com'
+  const baseUrl = 'https://voyage-forge.com'
   
   // Get all published blog posts
   const blogPosts = getAllBlogPosts()
