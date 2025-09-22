@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://voyageforge.com"),
+  metadataBase: new URL("https://voyage-forge.com"),
   alternates: {
     canonical: "/",
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Voyage Forge - Trusted AI Travel Platform | 500+ Businesses",
     description:
       "AI content creation, CRM, SEO tools, analytics & plugins for travel businesses. Trusted by 500+ companies with 4.9/5 rating. Plans starting at $29/mo.",
-    url: "https://voyageforge.com",
+    url: "https://voyage-forge.com",
     siteName: "Voyage Forge",
     images: [
       {

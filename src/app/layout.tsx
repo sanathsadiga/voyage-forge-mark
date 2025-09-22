@@ -3,7 +3,7 @@ import type { ReactNode } from "react"; // import type
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://voyageforge.com'),
+  metadataBase: new URL('https://voyage-forge.com'),
   title: {
     default: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
     template: '%s | Voyage Forge'
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://voyageforge.com',
+    url: 'https://voyage-forge.com',
     siteName: 'Voyage Forge',
     title: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
     description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides. Create compelling travel content that converts.',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     // bing: 'your-bing-verification-code',
   },
   alternates: {
-    canonical: 'https://voyageforge.com',
+    canonical: 'https://voyage-forge.com',
     types: {
       'application/rss+xml': [
         {
@@ -90,8 +90,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@type": "Organization",
               name: "Voyage Forge",
               description: "AI-powered travel content creation platform for tour operators, travel agencies, and travel guides",
-              url: "https://voyageforge.com",
-              logo: "https://voyageforge.com/vo%20(2).png",
+              url: "https://voyage-forge.com",
+              logo: "https://voyage-forge.com/vo%20(2).png",
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer service",
