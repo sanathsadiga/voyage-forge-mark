@@ -270,6 +270,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { label: "About Us", href: "/about-us" },
+                { label: "Contact Us", href: "/contact" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
               ].map((item, index) => (
                 <motion.li

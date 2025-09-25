@@ -34,6 +34,7 @@ export default function Header() {
     { href: "/about-us", label: "About Us" },
     { href: "/blog", label: "Blog" },
     { href: "/pricing", label: "Pricing" },
+    { href: "/contact", label: "Contact" },
     { href: "/privacy-policy", label: "Privacy Policy" }
   ];
 
