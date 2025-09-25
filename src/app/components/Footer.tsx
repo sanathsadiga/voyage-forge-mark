@@ -97,17 +97,19 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-300 to-orange-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </motion.button>
 
-              <motion.button
+              <motion.a
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => go("waitlist")}
+                href="https://app.voyage-forge.com/auth"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-amber-400/50 text-white font-bold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10"
               >
                 <span className="flex items-center gap-2">
-                  ✨ Join Waitlist
+                  Sign Up
                   <ExternalLink className="w-5 h-5" />
                 </span>
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </div>

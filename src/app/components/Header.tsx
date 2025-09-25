@@ -125,16 +125,18 @@ export default function Header() {
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
             </motion.button>
             
-            <motion.button
+            <motion.a
+              href="https://app.voyage-forge.com/auth"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection("waitlist")}
               className="group relative flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-black rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Users className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
-              Join Waitlist
+              Sign Up
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -222,16 +224,18 @@ export default function Header() {
                   Book Call
                 </motion.button>
                 
-                <motion.button
+                <motion.a
+                  href="https://app.voyage-forge.com/auth"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  onClick={() => scrollToSection("waitlist")}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-medium text-black bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 shadow-lg"
                 >
                   <Users className="w-5 h-5" />
-                  Join Waitlist
-                </motion.button>
+                  Sign Up
+                </motion.a>
               </div>
             </div>
           </motion.div>
