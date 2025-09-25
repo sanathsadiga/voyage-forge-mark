@@ -2,6 +2,7 @@ import "./global.css";
 import type { ReactNode } from "react"; // import type
 import type { Metadata } from 'next';
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://voyage-forge.com'),
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
