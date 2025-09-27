@@ -42,7 +42,7 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: "Plus",
-    price: { usd: 29, inr: 2400 },
+    price: { usd: 10, inr: 899 },
     period: "/month",
     description: "Perfect for individual travel content creators and small agencies",
     features: [
@@ -61,7 +61,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Plus + Booking Engine",
-    price: { usd: 79, inr: 6500 },
+    price: { usd: 20, inr: 1750 },
     period: "/month",
     description: "Enhanced with integrated booking capabilities for tour operators",
     features: [
@@ -84,7 +84,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Pro Plan",
-    price: { usd: 149, inr: 12300 },
+    price: { usd: 35, inr: 2999 },
     period: "/month",
     description: "Complete solution for large agencies and tour operators",
     features: [
@@ -328,7 +328,7 @@ export default function PricingSection(): ReactElement {
         <div itemScope itemType="https://schema.org/Product">
           <span itemProp="name">Voyage Forge Plus Plan</span>
           <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <span itemProp="price">29</span>
+            <span itemProp="price">10</span>
             <span itemProp="priceCurrency">USD</span>
             <span itemProp="availability">https://schema.org/InStock</span>
           </div>
@@ -336,7 +336,7 @@ export default function PricingSection(): ReactElement {
         <div itemScope itemType="https://schema.org/Product">
           <span itemProp="name">Voyage Forge Plus with Booking Engine</span>
           <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <span itemProp="price">79</span>
+            <span itemProp="price">20</span>
             <span itemProp="priceCurrency">USD</span>
             <span itemProp="availability">https://schema.org/InStock</span>
           </div>
@@ -344,7 +344,7 @@ export default function PricingSection(): ReactElement {
         <div itemScope itemType="https://schema.org/Product">
           <span itemProp="name">Voyage Forge Pro Plan</span>
           <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <span itemProp="price">149</span>
+            <span itemProp="price">35</span>
             <span itemProp="priceCurrency">USD</span>
             <span itemProp="availability">https://schema.org/InStock</span>
           </div>

@@ -52,7 +52,7 @@ interface PricingPlan {
 const pricingPlans: PricingPlan[] = [
   {
     name: "Plus",
-    price: { usd: 29, inr: 2400 },
+    price: { usd: 10, inr: 899 },
     description: "Perfect for individual travel content creators and small agencies",
     features: [
       "AI-powered content generation",
@@ -71,7 +71,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Plus + Booking Engine",
-    price: { usd: 79, inr: 6500 },
+    price: { usd: 20, inr: 1750 },
     description: "Enhanced with integrated booking capabilities for tour operators",
     features: [
       "Everything in Plus plan",
@@ -93,7 +93,7 @@ const pricingPlans: PricingPlan[] = [
   },
   {
     name: "Pro Plan",
-    price: { usd: 149, inr: 12300 },
+    price: { usd: 35, inr: 2999 },
     description: "Complete solution for large agencies and tour operators",
     features: [
       "Everything in Plus + Booking",
