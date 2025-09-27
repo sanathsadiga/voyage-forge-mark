@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import GoogleAnalytics from './components/GoogleAnalytics'
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   preload: true,
@@ -107,13 +107,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="dns-prefetch" href="//speed-insights.vercel.app" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        
+
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://vitals.vercel-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#7c3aed" />
+        <meta name="msapplication-TileColor" content="#7c3aed" />
+
         {/* Structured Data for SEO */}
         <script
           type="application/ld+json"
@@ -152,9 +155,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className={inter.className}>
         {children}
-        
+
         <GoogleAnalytics />
-        
+
         <Analytics />
         <SpeedInsights />
       </body>
