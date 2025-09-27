@@ -17,6 +17,11 @@ export default function Footer() {
     }
   };
 
+  // Function to open Calendly booking - same as Header
+  const openCalendly = () => {
+    window.open("https://calendly.com/founder-voyage-forge/30min", "_blank");
+  };
+
   return (
     <footer className="relative text-white overflow-hidden">
       {/* Enhanced background with same theme as hero */}
@@ -81,7 +86,7 @@ export default function Footer() {
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => go("calendly")}
+                onClick={openCalendly}
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 hover:from-amber-500 hover:via-orange-500 hover:to-yellow-500 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-2">
@@ -328,7 +333,7 @@ export default function Footer() {
               >
                 <motion.button
                   whileHover={{ x: 4 }}
-                  onClick={() => go("calendly")}
+                  onClick={openCalendly}
                   className="group text-slate-300/80 hover:text-white transition-colors duration-300 flex items-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-purple-400" />

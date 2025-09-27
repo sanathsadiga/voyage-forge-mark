@@ -29,6 +29,12 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  // Function to open Calendly booking
+  const openCalendly = () => {
+    window.open("https://calendly.com/founder-voyage-forge/30min", "_blank");
+    setMenuOpen(false);
+  };
+
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/about-us", label: "About Us" },
@@ -114,7 +120,7 @@ export default function Header() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection("calendly")}
+              onClick={openCalendly}
               className={`group flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-full border-2 transition-all duration-300 ${
                 scrolled
                   ? "border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"
@@ -218,7 +224,7 @@ export default function Header() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  onClick={() => scrollToSection("calendly")}
+                  onClick={openCalendly}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-medium text-gray-900 bg-white border-2 border-gray-900 rounded-xl hover:bg-gray-900 hover:text-white transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
@@ -233,6 +239,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-medium text-black bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 shadow-lg"
+                  onClick={() => setMenuOpen(false)}
                 >
                   <Users className="w-5 h-5" />
                   Sign Up
