@@ -123,6 +123,11 @@ const PricingCard = ({ plan, index, currency }: PricingCardProps): ReactElement 
       return `₹${price.inr}`;
     }
   };
+
+  // Function to redirect to auth page
+  const handleSignUp = () => {
+    window.open("https://app.voyage-forge.com/auth", "_blank");
+  };
   
   return (
     <motion.div
@@ -169,6 +174,7 @@ const PricingCard = ({ plan, index, currency }: PricingCardProps): ReactElement 
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={handleSignUp}
           className={`w-full py-4 px-6 rounded-2xl font-semibold text-lg transition-all duration-300 ${
             plan.highlighted
               ? 'bg-gradient-to-r from-amber-400 to-orange-500 text-black hover:from-amber-300 hover:to-orange-400 shadow-lg shadow-amber-500/30'

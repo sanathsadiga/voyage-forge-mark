@@ -209,6 +209,10 @@ export default function PricingPageContent() {
   const [currency, setCurrency] = useState<'usd' | 'inr'>('usd');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
+  const handleSignUp = () => {
+    window.open('https://app.voyage-forge.com/auth', '_blank');
+  };
+
   const toggleFaq = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
@@ -358,7 +362,9 @@ export default function PricingPageContent() {
                   </div>
                 </div>
 
-                <button className={`w-full py-4 rounded-2xl font-bold text-lg transition-all duration-300 mb-8 ${
+                <button 
+                  onClick={handleSignUp}
+                  className={`w-full py-4 rounded-2xl font-bold text-lg transition-all duration-300 mb-8 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-400 to-indigo-500 text-white hover:from-purple-300 hover:to-indigo-400 shadow-lg shadow-purple-500/30'
                     : 'bg-gradient-to-r from-emerald-400 to-teal-500 text-black hover:from-emerald-300 hover:to-teal-400 shadow-lg shadow-emerald-500/30'
@@ -607,7 +613,9 @@ export default function PricingPageContent() {
                 whileTap={{ scale: 0.95 }}
                 className="inline-block"
               >
-                <button className="px-8 py-4 bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-bold text-lg rounded-2xl hover:from-emerald-300 hover:to-teal-400 transition-all duration-300 shadow-lg shadow-emerald-500/30">
+                <button 
+                  onClick={handleSignUp}
+                  className="px-8 py-4 bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-bold text-lg rounded-2xl hover:from-emerald-300 hover:to-teal-400 transition-all duration-300 shadow-lg shadow-emerald-500/30">
                   Start Your Free Trial
                 </button>
               </motion.div>
