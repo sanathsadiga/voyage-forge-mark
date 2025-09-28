@@ -41,6 +41,22 @@ interface PricingPlan {
 
 const pricingPlans: PricingPlan[] = [
   {
+    name: "Free Plan",
+    price: { usd: 0, inr: 0 },
+    period: "/month",
+    description: "Perfect for individual travel content creators and small agencies",
+    features: [
+      "AI-powered content generation",
+      "SEO optimization tools",
+      "Basic analytics dashboard",
+      "Email support",
+      "1 Template",
+    ],
+    highlighted: false,
+    buttonText: "Start Free Plan",
+    icon: CheckIcon
+  },
+  {
     name: "Plus",
     price: { usd: 10, inr: 899 },
     period: "/month",
@@ -297,7 +313,7 @@ export default function PricingSection(): ReactElement {
           </motion.div>
         </motion.div>
         
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
+        <div className="grid lg:grid-cols-4 gap-8 lg:gap-6">
           {pricingPlans.map((plan, index) => (
             <PricingCard key={plan.name} plan={plan} index={index} currency={currency} />
           ))}

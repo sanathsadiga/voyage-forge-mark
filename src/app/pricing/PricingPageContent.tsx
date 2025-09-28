@@ -51,6 +51,22 @@ interface PricingPlan {
 
 const pricingPlans: PricingPlan[] = [
   {
+    name: "Free Plan",
+    price: { usd: 0, inr: 0 },
+    description: "Perfect for individual travel content creators and small agencies",
+    features: [
+      "AI-powered content generation",
+      "SEO optimization tools",
+      "Basic analytics dashboard",
+      "Email support",
+      "1 Template",
+    ],
+    buttonText: "Start Free Plan",
+    gradient: "from-blue-500/20 to-cyan-500/20",
+    iconColor: "text-blue-400",
+    icon: CheckIcon
+  },
+  {
     name: "Plus",
     price: { usd: 10, inr: 899 },
     description: "Perfect for individual travel content creators and small agencies",
@@ -318,7 +334,7 @@ export default function PricingPageContent() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
@@ -344,7 +360,7 @@ export default function PricingPageContent() {
                 )}
 
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${plan.gradient} border border-white/20 flex items-center justify-center ${plan.iconColor}`}>
+                  <div className={`w-20 h-12 rounded-2xl bg-gradient-to-br ${plan.gradient} border border-white/20 flex items-center justify-center ${plan.iconColor}`}>
                     <plan.icon />
                   </div>
                   <div>
