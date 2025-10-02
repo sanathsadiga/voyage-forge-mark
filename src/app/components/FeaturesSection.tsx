@@ -14,7 +14,7 @@ export default function FeaturesSection() {
       <motion.div 
         whileHover={{ y: -5 }}
         transition={{ duration: 0.3 }}
-        className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-xl p-8 shadow-2xl hover:shadow-amber-500/10 transition-all duration-500"
+        className="rounded-3xl border border-white/5 backdrop-blur-xl p-8 shadow-xl hover:shadow-amber-500/10 transition-all duration-500"
       >
         <div className="grid sm:grid-cols-2 gap-6">
           <FeatureCard

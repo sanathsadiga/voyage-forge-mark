@@ -136,33 +136,33 @@ const comparisonFeatures = [
   {
     category: "Content Creation",
     features: [
-      { name: "AI-powered content generation", plus: true, plusBooking: true, pro: true },
-      { name: "Content pieces per month", plus: "Up to 100", plusBooking: "Up to 100", pro: "Unlimited" },
-      { name: "SEO optimization tools", plus: true, plusBooking: true, pro: true },
-      { name: "Template library access", plus: true, plusBooking: true, pro: true },
-      { name: "Social media content", plus: true, plusBooking: true, pro: true },
+      { name: "AI-powered content generation", free: true, plus: true, plusBooking: true, pro: true },
+      { name: "Content pieces per month", free: "5", plus: "Up to 100", plusBooking: "Up to 100", pro: "Unlimited" },
+      { name: "SEO optimization tools", free: true, plus: true, plusBooking: true, pro: true },
+      { name: "Template library access", free: "1 Template", plus: true, plusBooking: true, pro: true },
+      { name: "Social media content", free: false, plus: true, plusBooking: true, pro: true },
     ]
   },
   {
     category: "Business Tools",
     features: [
-      { name: "WordPress integration", plus: true, plusBooking: true, pro: true },
-      { name: "Basic analytics dashboard", plus: true, plusBooking: true, pro: true },
-      { name: "Integrated booking system", plus: false, plusBooking: true, pro: true },
-      { name: "Payment processing", plus: false, plusBooking: true, pro: true },
-      { name: "Customer management", plus: false, plusBooking: true, pro: true },
-      { name: "White-label solution", plus: false, plusBooking: false, pro: true },
-      { name: "API access", plus: false, plusBooking: false, pro: true },
+      { name: "WordPress integration", free: false, plus: true, plusBooking: true, pro: true },
+      { name: "Basic analytics dashboard", free: true, plus: true, plusBooking: true, pro: true },
+      { name: "Integrated booking system", free: false, plus: false, plusBooking: true, pro: true },
+      { name: "Payment processing", free: false, plus: false, plusBooking: true, pro: true },
+      { name: "Customer management", free: false, plus: false, plusBooking: true, pro: true },
+      { name: "White-label solution", free: false, plus: false, plusBooking: false, pro: true },
+      { name: "API access", free: false, plus: false, plusBooking: false, pro: true },
     ]
   },
   {
     category: "Support & Features",
     features: [
-      { name: "Support level", plus: "Email", plusBooking: "Priority", pro: "24/7 Priority" },
-      { name: "Multi-language support", plus: false, plusBooking: true, pro: true },
-      { name: "Commission tracking", plus: false, plusBooking: true, pro: true },
-      { name: "Dedicated account manager", plus: false, plusBooking: false, pro: true },
-      { name: "Custom integrations", plus: false, plusBooking: false, pro: true },
+      { name: "Support level", free: "Email", plus: "Email", plusBooking: "Priority", pro: "24/7 Priority" },
+      { name: "Multi-language support", free: false, plus: false, plusBooking: true, pro: true },
+      { name: "Commission tracking", free: false, plus: false, plusBooking: true, pro: true },
+      { name: "Dedicated account manager", free: false, plus: false, plusBooking: false, pro: true },
+      { name: "Custom integrations", free: false, plus: false, plusBooking: false, pro: true },
     ]
   }
 ];
@@ -244,19 +244,8 @@ export default function PricingPageContent() {
   return (
     <>
       {/* Hero Section */}
-      <main className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 px-4 sm:px-8 pt-24 pb-20 overflow-hidden">
-        {/* Enhanced background effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -left-12 -top-6 w-96 h-96 bg-gradient-to-r from-emerald-400/8 to-teal-400/8 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute right-6 bottom-6 w-[32rem] h-80 bg-gradient-to-l from-purple-500/8 to-indigo-600/8 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-gradient-to-r from-amber-400/4 to-orange-500/4 rounded-full blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%),radial-gradient(circle_at_80%_20%,rgba(255,237,74,0.08),transparent_50%),radial-gradient(circle_at_40%_40%,rgba(139,92,246,0.06),transparent_50%)]" />
-          
-          {/* Floating particles */}
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400/40 rounded-full animate-ping" style={{animationDelay: '0s'}} />
-          <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-purple-400/60 rounded-full animate-ping" style={{animationDelay: '1s'}} />
-          <div className="absolute top-1/2 right-1/4 w-1.5 h-1.5 bg-amber-400/50 rounded-full animate-ping" style={{animationDelay: '2s'}} />
-        </div>
+      <main className="relative min-h-screen flex items-center px-4 sm:px-8 pt-24 pb-20">
+        {/* Remove individual background effects to use unified page background */}
 
         <div className="relative z-10 max-w-6xl mx-auto text-center w-full">
           <motion.span 
@@ -327,11 +316,8 @@ export default function PricingPageContent() {
       </main>
 
       {/* Pricing Plans Section */}
-      <section className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -left-20 top-1/4 w-96 h-96 bg-gradient-to-r from-purple-400/6 to-indigo-400/6 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute right-10 bottom-1/4 w-[32rem] h-80 bg-gradient-to-l from-emerald-500/6 to-teal-600/6 rounded-full blur-3xl" />
-        </div>
+      <section className="relative py-24 px-4 sm:px-8">
+        {/* Remove individual background effects to use unified page background */}
 
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-4 gap-8">
@@ -406,7 +392,7 @@ export default function PricingPageContent() {
       </section>
 
       {/* Feature Comparison Table */}
-      <section className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden">
+      <section className="relative py-24 px-4 sm:px-8">
         <div className="relative z-10 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -425,6 +411,13 @@ export default function PricingPageContent() {
             </p>
           </motion.div>
 
+          {/* Mobile scroll button - Top */}
+          <div className="block md:hidden mb-4 text-center">
+            <button className="px-4 py-2 bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-semibold rounded-xl text-sm">
+              ← Scroll to view & compare plans →
+            </button>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -432,59 +425,84 @@ export default function PricingPageContent() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-gradient-to-br from-white/8 to-white/4 backdrop-blur-xl rounded-3xl border border-white/10 p-8 overflow-x-auto"
           >
-            <table className="w-full min-w-[600px]">
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th className="text-left py-4 text-white font-semibold">Features</th>
-                  <th className="text-center py-4 text-white font-semibold">Plus</th>
-                  <th className="text-center py-4 text-white font-semibold">Plus + Booking</th>
-                  <th className="text-center py-4 text-white font-semibold">Pro Plan</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonFeatures.map((category, categoryIndex) => (
-                  <React.Fragment key={category.category}>
-                    <tr>
-                      <td colSpan={4} className="py-6">
-                        <h3 className="text-lg font-bold text-emerald-400">{category.category}</h3>
-                      </td>
-                    </tr>
-                    {category.features.map((feature, featureIndex) => (
-                      <tr key={featureIndex} className="border-b border-white/5">
-                        <td className="py-3 text-gray-300">{feature.name}</td>
-                        <td className="py-3 text-center">
-                          {typeof feature.plus === 'boolean' ? (
-                            feature.plus ? <CheckIcon /> : <XIcon />
-                          ) : (
-                            <span className="text-gray-300 text-sm">{feature.plus}</span>
-                          )}
-                        </td>
-                        <td className="py-3 text-center">
-                          {typeof feature.plusBooking === 'boolean' ? (
-                            feature.plusBooking ? <CheckIcon /> : <XIcon />
-                          ) : (
-                            <span className="text-gray-300 text-sm">{feature.plusBooking}</span>
-                          )}
-                        </td>
-                        <td className="py-3 text-center">
-                          {typeof feature.pro === 'boolean' ? (
-                            feature.pro ? <CheckIcon /> : <XIcon />
-                          ) : (
-                            <span className="text-gray-300 text-sm">{feature.pro}</span>
-                          )}
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[700px]">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="text-left py-4 px-2 text-white font-semibold">Features</th>
+                    <th className="text-center py-4 px-2 text-white font-semibold min-w-[100px]">Free</th>
+                    <th className="text-center py-4 px-2 text-white font-semibold min-w-[100px]">Plus</th>
+                    <th className="text-center py-4 px-2 text-white font-semibold min-w-[120px]">Plus + Booking</th>
+                    <th className="text-center py-4 px-2 text-white font-semibold min-w-[100px]">Pro Plan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonFeatures.map((category, categoryIndex) => (
+                    <React.Fragment key={category.category}>
+                      <tr>
+                        <td colSpan={5} className="py-6">
+                          <h3 className="text-lg font-bold text-emerald-400">{category.category}</h3>
                         </td>
                       </tr>
-                    ))}
-                  </React.Fragment>
-                ))}
-              </tbody>
-            </table>
+                      {category.features.map((feature, featureIndex) => (
+                        <tr key={featureIndex} className="border-b border-white/5">
+                          <td className="py-3 px-2 text-gray-300">{feature.name}</td>
+                          <td className="py-3 px-2 text-center">
+                            <div className="flex justify-center items-center min-h-[20px]">
+                              {typeof feature.free === 'boolean' ? (
+                                feature.free ? <CheckIcon /> : <XIcon />
+                              ) : (
+                                <span className="text-gray-300 text-sm">{feature.free}</span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="py-3 px-2 text-center">
+                            <div className="flex justify-center items-center min-h-[20px]">
+                              {typeof feature.plus === 'boolean' ? (
+                                feature.plus ? <CheckIcon /> : <XIcon />
+                              ) : (
+                                <span className="text-gray-300 text-sm">{feature.plus}</span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="py-3 px-2 text-center">
+                            <div className="flex justify-center items-center min-h-[20px]">
+                              {typeof feature.plusBooking === 'boolean' ? (
+                                feature.plusBooking ? <CheckIcon /> : <XIcon />
+                              ) : (
+                                <span className="text-gray-300 text-sm">{feature.plusBooking}</span>
+                              )}
+                            </div>
+                          </td>
+                          <td className="py-3 px-2 text-center">
+                            <div className="flex justify-center items-center min-h-[20px]">
+                              {typeof feature.pro === 'boolean' ? (
+                                feature.pro ? <CheckIcon /> : <XIcon />
+                              ) : (
+                                <span className="text-gray-300 text-sm">{feature.pro}</span>
+                              )}
+                            </div>
+                          </td>
+                        </tr>
+                      ))}
+                    </React.Fragment>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </motion.div>
+
+          {/* Mobile scroll button - Bottom */}
+          <div className="block md:hidden mt-4 text-center">
+            <button className="px-4 py-2 bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-semibold rounded-xl text-sm">
+              ← Scroll to view & compare plans →
+            </button>
+          </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden">
+      <section className="relative py-24 px-4 sm:px-8">
         <div className="relative z-10 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -535,7 +553,7 @@ export default function PricingPageContent() {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden">
+      <section className="relative py-24 px-4 sm:px-8">
         <div className="relative z-10 max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -600,10 +618,8 @@ export default function PricingPageContent() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-gradient-to-r from-emerald-400/4 to-teal-500/4 rounded-full blur-3xl" />
-        </div>
+      <section className="relative py-24 px-4 sm:px-8">
+        {/* Remove individual background effects to use unified page background */}
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.div

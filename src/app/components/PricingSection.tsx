@@ -232,7 +232,7 @@ export default function PricingSection(): ReactElement {
 
   return (
     <section 
-      className="relative py-24 px-4 sm:px-8 bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden"
+      className="relative py-24 px-4 sm:px-8 overflow-hidden"
       itemScope 
       itemType="https://schema.org/PriceSpecification"
     >

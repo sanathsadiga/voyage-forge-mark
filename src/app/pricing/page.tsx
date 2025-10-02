@@ -131,7 +131,15 @@ const pricingStructuredData = {
 
 export default function Pricing() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-900/90 to-indigo-950 overflow-hidden">
+      {/* Enhanced background orbs and effects */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -left-4 -top-8 w-96 h-96 bg-emerald-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute -right-8 top-1/3 w-80 h-80 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-300"></div>
+        <div className="absolute -bottom-8 left-1/3 w-96 h-96 bg-indigo-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-500/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-500"></div>
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -141,6 +149,6 @@ export default function Pricing() {
       <Header />
       <PricingPageContent />
       <Footer />
-    </>
+    </div>
   );
 }
