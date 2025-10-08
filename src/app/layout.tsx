@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import GoogleAnalytics from './components/GoogleAnalytics'
+import TawkChat from './components/TawkChat'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -156,10 +157,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={inter.className}>
         {children}
 
-        <GoogleAnalytics />
+  <GoogleAnalytics />
+  <TawkChat />
 
-        <Analytics />
-        <SpeedInsights />
+  <Analytics />
+  <SpeedInsights />
       </body>
     </html>
   );
