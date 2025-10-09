@@ -280,6 +280,7 @@ export default function Footer() {
                 { label: "Contact Us", href: "/contact" },
                 { label: "Privacy Policy", href: "/privacy-policy" },
                 { label: "Refund Policy", href: "/refund-policy" },
+                { label: "Terms and Conditions", href: "/terms-conditions" }
               ].map((item, index) => (
                 <motion.li
                   key={item.label}
