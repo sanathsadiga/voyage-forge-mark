@@ -38,6 +38,16 @@ export default function HeroSection() {
         </span>
       </motion.h1>
 
+      {/* Hero subheading added for OAuth verification */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35, duration: 0.6 }}
+        className="mt-4 text-lg text-gray-300 max-w-3xl"
+      >
+        AI-powered travel marketing platform for tour operators and travel agencies. Generate SEO content, manage inquiries with built‑in CRM, integrate plugins, and track visitors — all on a monthly plan.
+      </motion.p>
+
       <motion.p 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     "Voyage Forge - AI Travel Platform | Trusted by 500+ Travel Businesses",
   description:
-    "Complete travel business platform with AI content writer, CRM inquiry handling, advanced SEO tools, plugin integrations, and comprehensive analytics. Trusted by tour operators worldwide with 4.9/5 rating.",
+    "AI-powered travel marketing platform for tour operators and travel agencies. Create SEO content, manage inquiries with built-in CRM, integrate plugins and analytics, and use booking widgets — monthly plans. Contact: founder@voyage-forge.com",
   keywords: [
     "travel content creation pricing",
     "AI travel content plans",
@@ -103,7 +103,7 @@ export default function Home() {
       <Header />
 
       <main className="relative z-10">
-        <section className="relative min-h-[calc(100vh-80px)] flex items-center px-4 sm:px-8 pt-24">
+  <section className="relative min-h-[calc(100vh-80px)] flex items-center px-4 sm:px-8 pt-24">
           {/* Enhanced background orbs and effects */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -left-12 -top-6 w-96 h-96 bg-gradient-to-r from-amber-400/8 to-orange-400/8 rounded-full blur-3xl animate-pulse" />
@@ -129,6 +129,19 @@ export default function Home() {
           <div className="relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center w-full">
             <HeroSection />
             <FeaturesSection />
+          </div>
+        </section>
+
+        {/* What is Voyage Forge — visible short block for OAuth verification */}
+        <section aria-label="What is Voyage Forge" className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/6">
+            <h3 className="text-2xl text-white font-semibold">What is Voyage Forge</h3>
+            <p className="mt-3 text-gray-300 max-w-3xl leading-relaxed">
+              Voyage Forge is an AI-powered travel marketing platform that helps tour operators and travel agencies grow bookings by automating SEO content creation, managing inquiries with a built-in CRM, integrating forms & analytics, and providing booking-ready widgets — available on monthly plans.
+            </p>
+            <p className="mt-4 text-sm text-gray-400">
+              Privacy policy • <a href="/privacy-policy" className="underline">privacy policy</a> • Contact: <a href="mailto:founder@voyage-forge.com" className="underline">founder@voyage-forge.com</a>
+            </p>
           </div>
         </section>
 

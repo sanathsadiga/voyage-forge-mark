@@ -68,15 +68,17 @@ export default function Header() {
             transition={{ duration: 0.2 }}
           >
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative">
+              <div className="relative flex items-center gap-3">
                 <Image
-                  src="/vo (2).png"
+                  src="/android-chrome-192x192.png"
                   alt="Voyage Forge Logo"
-                  width={180}
-                  height={180}
-                  className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  width={48}
+                  height={48}
+                  className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Visible textual app name for OAuth verification; dark on scroll */}
+                <span className={`hidden sm:inline-block font-black text-lg ${scrolled ? 'text-gray-900' : 'text-white'}`}>Voyage Forge</span>
               </div>
             </Link>
           </motion.div>
