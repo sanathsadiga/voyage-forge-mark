@@ -98,6 +98,9 @@ export const metadata: Metadata = {
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },
+  other: {
+    'facebook-domain-verification': 'qot6amtjy78u01esdzmxndt8a4ok1n',
+  },
   alternates: {
     canonical: 'https://voyage-forge.com',
     types: {
