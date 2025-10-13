@@ -65,14 +65,16 @@ export default function HeroSection() {
         transition={{ delay: 0.7, duration: 0.8 }}
         className="mt-10 flex flex-col sm:flex-row gap-5"
       >
-        <motion.button
+        <motion.a
+          href="https://app.voyage-forge.com/auth"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          onClick={() => scrollToSection("get-started")}
           className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 hover:from-amber-500 hover:via-orange-500 hover:to-yellow-500 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 overflow-hidden"
         >
           <span className="relative z-10 flex items-center gap-2">
-            ✨ Start Your Free Trial
+            Try Free
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
@@ -81,16 +83,18 @@ export default function HeroSection() {
             </motion.span>
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-amber-300 to-orange-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-        </motion.button>
+        </motion.a>
 
-        <motion.button
+        <motion.a
+          href="https://calendly.com/founder-voyage-forge/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          onClick={() => scrollToSection("templates")}
           className="group relative inline-flex items-center justify-center px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-amber-400/50 text-white font-bold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10"
         >
           <span className="flex items-center gap-2">
-            🎨 View Live Demos
+            Book Demo Call
             <motion.span
               animate={{ rotate: [0, 360] }}
               transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
@@ -98,7 +102,7 @@ export default function HeroSection() {
               ⚡
             </motion.span>
           </span>
-        </motion.button>
+        </motion.a>
       </motion.div>
 
       <motion.div 
