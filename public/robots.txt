@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://voyage-forge.com/sitemap.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /about-us
+Allow: /pricing
+Allow: /referral
+Allow: /privacy-policy
+Allow: /terms-conditions
+Allow: /refund-policy
+Allow: /contact
+Allow: /affiliation
+Allow: /blog/
+
+# Allow favicon and icons
+Allow: /favicon.ico
+Allow: /icon
+Allow: /apple-icon
+Allow: *.png
+Allow: *.ico
+Allow: /site.webmanifest
+Allow: /browserconfig.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1

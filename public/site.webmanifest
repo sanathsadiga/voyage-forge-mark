@@ -1,7 +1,7 @@
 {
-  "name": "Voyage Forge - AI Travel Platform",
+  "name": "Voyage Forge - Free Travel Website Builder",
   "short_name": "Voyage Forge",
-  "description": "Complete AI-powered travel business platform with content creation, CRM, SEO tools, and analytics.",
+  "description": "Free travel website builder with AI content creation, CRM, SEO tools, and analytics. Build your travel site for free today!",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -19,7 +19,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#7c3aed",
+  "theme_color": "#6366f1",
   "background_color": "#0f172a", 
   "display": "standalone",
   "orientation": "portrait",

@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEOEnhancer from '../components/SEOEnhancer';
 import AboutUsContent from './AboutUsContent';
 
 export const metadata: Metadata = {
-  title: 'About Us - Voyage Forge | Revolutionizing Travel Through Innovation',
-  description: 'Learn about Voyage Forge\'s mission to empower travel businesses with AI-powered tools and cutting-edge technology. Meet our team and discover our story.',
+  title: 'About Free Travel Platform | Voyage Forge Story & Mission',
+  description: 'Learn about Voyage Forge - the free travel website builder empowering 500+ travel businesses. Our mission: democratize travel technology with free AI-powered tools.',
   openGraph: {
     title: 'About Us - Voyage Forge | Revolutionizing Travel Through Innovation',
     description: 'Learn about Voyage Forge\'s mission to empower travel businesses with AI-powered tools and cutting-edge technology.',
@@ -37,6 +38,17 @@ export default function AboutUs() {
       </div>
 
       <Header />
+      
+      <SEOEnhancer 
+        pageType="about"
+        focusKeyword="about free travel platform"
+        keywords={[
+          'free travel website company',
+          'travel technology free',
+          'about voyage forge'
+        ]}
+      />
+      
       <AboutUsContent />
       <Footer />
     </div>

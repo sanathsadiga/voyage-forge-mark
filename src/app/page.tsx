@@ -6,20 +6,30 @@ import FeaturesSection from "./components/FeaturesSection";
 import FeatureCardsSection from "./components/FeatureCardsSection";
 import PricingSection from "./components/PricingSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import SEOEnhancer from "./components/SEOEnhancer";
 import type { Metadata } from "next";
 
 // SEO Metadata
 export const metadata: Metadata = {
   title:
-    "Voyage Forge - AI Travel Platform | Trusted by 500+ Travel Businesses",
+    "Free Travel Website Builder | AI Travel Platform | Voyage Forge",
   description:
-    "AI-powered travel marketing platform for tour operators and travel agencies. Create SEO content, manage inquiries with built-in CRM, integrate plugins and analytics, and use booking widgets — monthly plans. Contact: founder@voyage-forge.com",
+    "Get your FREE travel website with AI content creation! Best free travel site builder for tour operators, travel agencies & guides. Free plan available - no credit card needed. Create travel content, manage bookings & grow your business.",
   keywords: [
+    "free travel website",
+    "free travel site builder",
+    "free travel platform",
+    "free AI travel tools",
+    "free travel content creator",
+    "free travel website builder",
+    "free tour operator software",
+    "free travel agency platform",
+    "free travel marketing tools",
+    "free travel SEO tools",
+    "free travel booking system",
+    "free travel CRM",
     "travel content creation pricing",
     "AI travel content plans",
-    "travel CRM software",
-    "travel SEO tools",
-    "travel analytics platform",
     "travel website builder cost",
     "itinerary generator pricing",
     "travel booking widgets plans",
@@ -49,9 +59,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Voyage Forge - Trusted AI Travel Platform | 500+ Businesses",
+    title: "Free Travel Website Builder | AI Platform | Voyage Forge",
     description:
-      "AI content creation, CRM, SEO tools, analytics & plugins for travel businesses. Trusted by 500+ companies with 4.9/5 rating. Plans starting at $29/mo.",
+      "Start FREE! Complete travel platform with AI content creation, CRM, SEO tools & analytics. Trusted by 500+ companies. Free plan available - upgrade anytime.",
     url: "https://voyage-forge.com",
     siteName: "Voyage Forge",
     images: [
@@ -59,7 +69,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Voyage Forge - Trusted Complete AI Travel Business Platform",
+        alt: "Free Travel Website Builder - Voyage Forge AI Platform",
       },
     ],
     locale: "en_US",
@@ -67,9 +77,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Voyage Forge - Trusted AI Travel Platform | 4.9/5 Rating",
+    title: "Free Travel Website Builder | Start Your Travel Business FREE",
     description:
-      "AI content creation, CRM, SEO tools & analytics for travel businesses. Trusted by 500+ companies with 4.9/5 rating.",
+      "Complete FREE travel platform with AI content creation, CRM & SEO tools. Trusted by 500+ companies. Start building your travel site today!",
     images: ["/twitter-image.jpg"],
     creator: "@voyageforge",
   },
@@ -101,6 +111,17 @@ export default function Home() {
       </div>
 
       <Header />
+      
+      <SEOEnhancer 
+        pageType="homepage"
+        focusKeyword="free travel website"
+        keywords={[
+          'free travel website builder',
+          'create travel website free',
+          'free tour operator platform',
+          'free travel agency software'
+        ]}
+      />
 
       <main className="relative z-10">
   <section className="relative min-h-[calc(100vh-80px)] flex items-center px-4 sm:px-8 pt-24">
@@ -218,6 +239,202 @@ export default function Home() {
           <li>Verified customer reviews from tour operators worldwide</li>
         </ul>
       </div>
+
+      {/* Comprehensive Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "SoftwareApplication",
+                "@id": "https://voyage-forge.com/#software",
+                "name": "Voyage Forge",
+                "description": "Free AI-powered travel website builder and content creation platform for tour operators, travel agencies, and travel guides",
+                "url": "https://voyage-forge.com",
+                "image": "https://voyage-forge.com/vo%20(2).png",
+                "applicationCategory": "TravelApplication",
+                "operatingSystem": "Web-based",
+                "offers": [
+                  {
+                    "@type": "Offer",
+                    "@id": "https://voyage-forge.com/#free-plan",
+                    "name": "Free Plan",
+                    "description": "Free travel website builder with AI content generation",
+                    "price": "0",
+                    "priceCurrency": "USD",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "itemOffered": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge Free Plan"
+                    },
+                    "image": "https://voyage-forge.com/vo%20(2).png"
+                  },
+                  {
+                    "@type": "Offer",
+                    "@id": "https://voyage-forge.com/#plus-plan",
+                    "name": "Plus Plan",
+                    "description": "Professional travel content creation with advanced features",
+                    "price": "29",
+                    "priceCurrency": "USD",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "itemOffered": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge Plus Plan"
+                    },
+                    "image": "https://voyage-forge.com/vo%20(2).png"
+                  },
+                  {
+                    "@type": "Offer",
+                    "@id": "https://voyage-forge.com/#plus-booking-plan",
+                    "name": "Plus + Booking Engine",
+                    "description": "Complete travel platform with integrated booking system",
+                    "price": "79",
+                    "priceCurrency": "USD",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "itemOffered": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge Plus + Booking Engine"
+                    },
+                    "image": "https://voyage-forge.com/vo%20(2).png"
+                  },
+                  {
+                    "@type": "Offer",
+                    "@id": "https://voyage-forge.com/#pro-plan",
+                    "name": "Pro Plan",
+                    "description": "Enterprise travel platform with unlimited features",
+                    "price": "149",
+                    "priceCurrency": "USD",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "itemOffered": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge Pro Plan"
+                    },
+                    "image": "https://voyage-forge.com/vo%20(2).png"
+                  }
+                ],
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "500",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "review": [
+                  {
+                    "@type": "Review",
+                    "reviewRating": {
+                      "@type": "Rating",
+                      "ratingValue": "5",
+                      "bestRating": "5"
+                    },
+                    "author": {
+                      "@type": "Person",
+                      "name": "Sarah Mitchell"
+                    },
+                    "reviewBody": "Voyage Forge transformed our content strategy. We're creating 10x more engaging content in half the time.",
+                    "itemReviewed": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge",
+                      "url": "https://voyage-forge.com"
+                    }
+                  },
+                  {
+                    "@type": "Review",
+                    "reviewRating": {
+                      "@type": "Rating",
+                      "ratingValue": "5",
+                      "bestRating": "5"
+                    },
+                    "author": {
+                      "@type": "Person",
+                      "name": "Carlos Rodriguez"
+                    },
+                    "reviewBody": "The booking system integration is seamless. Our conversion rates increased by 40% since implementing Voyage Forge.",
+                    "itemReviewed": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge",
+                      "url": "https://voyage-forge.com"
+                    }
+                  },
+                  {
+                    "@type": "Review",
+                    "reviewRating": {
+                      "@type": "Rating",
+                      "ratingValue": "5",
+                      "bestRating": "5"
+                    },
+                    "author": {
+                      "@type": "Person",
+                      "name": "Emily Chen"
+                    },
+                    "reviewBody": "Best investment we've made for our travel business. The AI content quality is incredible and saves us hours daily.",
+                    "itemReviewed": {
+                      "@type": "SoftwareApplication",
+                      "name": "Voyage Forge",
+                      "url": "https://voyage-forge.com"
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://voyage-forge.com/#organization",
+                "name": "Voyage Forge",
+                "url": "https://voyage-forge.com",
+                "logo": "https://voyage-forge.com/vo%20(2).png",
+                "description": "Free travel website builder with AI-powered content creation platform for tour operators, travel agencies, and travel guides",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "contactType": "customer service",
+                  "email": "founder@voyage-forge.com",
+                  "availableLanguage": "English"
+                },
+                "sameAs": [
+                  "https://twitter.com/voyageforge",
+                  "https://linkedin.com/company/voyageforge"
+                ]
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://voyage-forge.com/#website",
+                "url": "https://voyage-forge.com",
+                "name": "Voyage Forge - Free Travel Website Builder",
+                "description": "Create your free travel website with AI content generation, booking system, CRM, and SEO tools",
+                "publisher": {
+                  "@id": "https://voyage-forge.com/#organization"
+                },
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://voyage-forge.com/search?q={search_term_string}",
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": "https://voyage-forge.com/#breadcrumb",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://voyage-forge.com"
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
     </div>
   );
 }

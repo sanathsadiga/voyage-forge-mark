@@ -55,9 +55,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/affiliation`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/terms-conditions`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
       priority: 0.5,
     },
-
+    {
+      url: `${baseUrl}/refund-policy`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    },
   ]
   
   // Dynamic blog post pages
