@@ -101,6 +101,35 @@ const policySections: PolicySection[] = [
     )
   },
   {
+    icon: ShieldIcon,
+    title: "Google Calendar Access",
+    gradient: "from-blue-500/20 to-indigo-500/20",
+    iconColor: "text-blue-400",
+    content: (
+      <div className="space-y-4">
+        <h4 className="text-lg font-semibold text-white">Calendar Booking Access</h4>
+        <p className="text-gray-300">
+          We request access to your Google Calendar only to create and manage events that represent bookings you have made with our service. This access is used solely to sync booking information (event title, time, and description) so your calendar reflects reservations made through Voyage Forge.
+        </p>
+
+        <h4 className="text-lg font-semibold text-white mt-6">No Other Google Data Access</h4>
+        <p className="text-gray-300">
+          We do not access, store, or use any other Google data (for example: email, contacts, Drive, or location) for advertising, analytics, profiling, or any purpose unrelated to booking/calendar sync.
+        </p>
+
+        <h4 className="text-lg font-semibold text-white mt-6">Sharing and Sale</h4>
+        <p className="text-gray-300">
+          We do not sell, rent, or share Google user data with third parties.
+        </p>
+
+        <h4 className="text-lg font-semibold text-white mt-6">Revoke Access</h4>
+        <p className="text-gray-300">
+          You may revoke access at any time via your Google Account (<a href="https://myaccount.google.com/permissions" className="underline">myaccount.google.com/permissions</a>) or from within our app's account settings.
+        </p>
+      </div>
+    )
+  },
+  {
     icon: CookieIcon,
     title: "Cookies & Tracking",
     gradient: "from-amber-500/20 to-orange-500/20",
@@ -431,7 +460,7 @@ export default function PrivacyPolicyContent() {
                   We'll notify you of any significant changes to this privacy policy via email.
                 </p>
                 <p className="text-blue-400 font-semibold">
-                  Last updated: September 21, 2025
+                  Last updated: October 10, 2025
                 </p>
               </div>
             </div>
