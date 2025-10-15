@@ -307,7 +307,7 @@ export default function PrivacyPolicyContent() {
             transition={{ delay: 0.7, duration: 0.8 }}
             className="mt-12 text-gray-300"
           >
-            <p className="text-lg">Last Updated: September 21, 2025</p>
+            <p className="text-lg">Last Updated: October 10, 2025</p>
             <p className="text-sm mt-2">Effective Date: September 21, 2025</p>
           </motion.div>
         </div>
