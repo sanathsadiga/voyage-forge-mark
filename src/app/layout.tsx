@@ -187,6 +187,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://t.contentsquare.net/uxa/f9e30ac7d1de3.js"
           strategy="afterInteractive"
         />
+        {/* Zoho SalesIQ widget - load via Next Script (non-blocking, site-wide) */}
+        <Script id="zoho-config" strategy="afterInteractive">
+          {`var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq61a298e1bd3ba42a2ed191e8f66c1b881676befc45621b7e1d63a78ffd5e31b1", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};`}
+        </Script>
+        <Script src="https://salesiq.zoho.in/widget" strategy="afterInteractive" />
       </head>
       <body className={inter.className}>
         {children}
