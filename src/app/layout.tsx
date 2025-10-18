@@ -2,6 +2,7 @@ import "./global.css";
 import type { ReactNode } from "react"; // import type
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import GoogleAnalytics from './components/GoogleAnalytics'
@@ -181,6 +182,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="theme-color" content="#6366f1" />
         <meta name="msapplication-TileColor" content="#6366f1" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
+        {/* Contentsquare global script (added to head as requested) */}
+        <Script
+          src="https://t.contentsquare.net/uxa/f9e30ac7d1de3.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body className={inter.className}>
         {children}
