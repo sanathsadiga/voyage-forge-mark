@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import GoogleAnalytics from './components/GoogleAnalytics'
 import TawkChat from './components/TawkChat'
+import MicrosoftClarity from './components/MicrosoftClarity'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -196,11 +197,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={inter.className}>
         {children}
 
-  <GoogleAnalytics />
-  <TawkChat />
+        <GoogleAnalytics />
+        <TawkChat />
+        <MicrosoftClarity />
 
-  <Analytics />
-  <SpeedInsights />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
