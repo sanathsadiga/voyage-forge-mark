@@ -188,11 +188,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://t.contentsquare.net/uxa/f9e30ac7d1de3.js"
           strategy="afterInteractive"
         />
-        {/* Zoho SalesIQ widget - load via Next Script (non-blocking, site-wide) */}
-        <Script id="zoho-config" strategy="afterInteractive">
-          {`var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq61a298e1bd3ba42a2ed191e8f66c1b881676befc45621b7e1d63a78ffd5e31b1", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};`}
-        </Script>
-        <Script src="https://salesiq.zoho.in/widget" strategy="afterInteractive" />
+        {/* Zoho SalesIQ widget will be loaded just before </body> to match placement requirements */}
       </head>
       <body className={inter.className}>
         {children}
@@ -201,8 +197,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <TawkChat />
         <MicrosoftClarity />
 
-        <Analytics />
-        <SpeedInsights />
+  <Analytics />
+  <SpeedInsights />
+  {/* Zoho SalesIQ - placed before closing </body> to match placement instructions */}
+  <Script id="zoho-config-body" strategy="lazyOnload">
+    {`var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq61a298e1bd3ba42a2ed191e8f66c1b881676befc45621b7e1d63a78ffd5e31b1", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}
+  </Script>
       </body>
     </html>
   );
