@@ -4,6 +4,20 @@ import { motion } from "framer-motion";
 import type { ReactElement } from "react";
 import { useState } from "react";
 
+// Shared auth link and navigation helper for CTAs
+const authLink = "https://app.voyage-forge.com/auth";
+
+function navigateToAuth(eventLabel = 'pricing_start_free') {
+  const href = authLink;
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'cta_click', {
+      event_category: 'engagement',
+      event_label: eventLabel,
+    });
+  }
+  window.location.href = href;
+}
+
 // SVG Icons for pricing features
 const CheckIcon = (): ReactElement => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -142,7 +156,7 @@ const PricingCard = ({ plan, index, currency }: PricingCardProps): ReactElement 
 
   // Function to redirect to auth page
   const handleSignUp = () => {
-    window.open("https://app.voyage-forge.com/auth", "_blank");
+    navigateToAuth(plan.name === 'Free Plan' ? 'pricing_start_free' : `pricing_${plan.name.replace(/\s+/g,'_').toLowerCase()}`);
   };
   
   return (
@@ -229,6 +243,7 @@ const PricingCard = ({ plan, index, currency }: PricingCardProps): ReactElement 
 
 export default function PricingSection(): ReactElement {
   const [currency, setCurrency] = useState<'usd' | 'inr'>('usd');
+  // (navigateToAuth is defined in module scope)
 
   return (
     <section 

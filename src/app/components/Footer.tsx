@@ -9,6 +9,14 @@ import { ArrowRight, Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 export default function Footer() {
   const pathname = usePathname();
 
+  const authLink = "https://app.voyage-forge.com/auth?utm_medium=cta&utm_campaign=hero";
+  function navigateToAuth(label = 'footer_start_free') {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+    }
+    window.location.href = authLink;
+  }
+
   const go = (id: string) => {
     if (pathname !== "/") {
       window.location.href = `/#${id}`;
@@ -102,19 +110,17 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-gradient-to-r from-amber-300 to-orange-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </motion.button>
 
-              <motion.a
+              <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                href="https://app.voyage-forge.com/auth"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => navigateToAuth('footer_sign_up')}
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-amber-400/50 text-white font-bold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10"
               >
                 <span className="flex items-center gap-2">
                   Sign Up
                   <ExternalLink className="w-5 h-5" />
                 </span>
-              </motion.a>
+              </motion.button>
             </motion.div>
           </div>
         </div>

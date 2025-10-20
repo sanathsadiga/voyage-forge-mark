@@ -11,6 +11,19 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const authLink = "https://app.voyage-forge.com/auth?utm_medium=cta&utm_campaign=hero";
+
+  function onCTAClick(e: React.MouseEvent) {
+    e.preventDefault();
+    const href = authLink;
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag('event', 'cta_click', {
+        event_category: 'engagement',
+        event_label: 'header_start_free',
+      });
+    }
+    setTimeout(() => { window.location.href = href; }, 150);
+  }
 
   // Detect scroll for background
   useEffect(() => {
@@ -135,15 +148,16 @@ export default function Header() {
             </motion.button>
             
             <motion.a
-              href="https://app.voyage-forge.com/auth"
-              target="_blank"
+              href={authLink}
+              onClick={onCTAClick}
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group relative flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-black rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <Users className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
-              Sign Up
+              <span className="mr-2 inline-flex items-center px-2 py-1 text-xs font-semibold bg-white/90 text-black rounded-full">Free</span>
+              Start Free - No Card
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-300 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </motion.a>
           </div>
@@ -234,17 +248,17 @@ export default function Header() {
                 </motion.button>
                 
                 <motion.a
-                  href="https://app.voyage-forge.com/auth"
-                  target="_blank"
+                  href={authLink}
+                  onClick={(e) => { onCTAClick(e); setMenuOpen(false); }}
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 text-base font-medium text-black bg-gradient-to-r from-yellow-400 to-orange-400 rounded-xl hover:from-yellow-500 hover:to-orange-500 transition-all duration-300 shadow-lg"
-                  onClick={() => setMenuOpen(false)}
                 >
                   <Users className="w-5 h-5" />
-                  Sign Up
+                  <span className="inline-flex items-center px-2 py-1 text-xs font-semibold bg-white/90 text-black rounded-full mr-2">Free</span>
+                  Start Free - No Card
                 </motion.a>
               </div>
             </div>

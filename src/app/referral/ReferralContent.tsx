@@ -3,6 +3,13 @@
 import { motion } from 'framer-motion';
 
 const ReferralContent = () => {
+  const authLink = "https://app.voyage-forge.com/auth?utm_medium=cta&utm_campaign=referral";
+  function navigateToAuth(label = 'referral_dashboard') {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+    }
+    window.location.href = authLink;
+  }
   const rewardTiers = [
     {
       referrals: 1,
@@ -150,17 +157,15 @@ const ReferralContent = () => {
                 <p className="text-gray-300 mb-6">
                   Login to your dashboard to access your unique referral code
                 </p>
-                <a
-                  href="https://app.voyage-forge.com/auth"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => navigateToAuth('referral_access_dashboard')}
                   className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-200"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
                   </svg>
                   Access Dashboard
-                </a>
+                </button>
               </div>
             </motion.div>
           </motion.div>
@@ -314,17 +319,15 @@ const ReferralContent = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <a
-                href="https://app.voyage-forge.com/auth"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => navigateToAuth('referral_cta')}
                 className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 flex items-center space-x-3"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
                 </svg>
                 <span>Access Dashboard</span>
-              </a>
+              </button>
               
               <a
                 href="/contact"

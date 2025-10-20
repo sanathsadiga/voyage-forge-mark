@@ -2,6 +2,14 @@
 
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+// shared auth link and navigator
+const authLink = "https://app.voyage-forge.com/auth?utm_medium=cta&utm_campaign=hero";
+function navigateToAuth(label = 'pricing_start_free') {
+  if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event', 'cta_click', { event_category: 'engagement', event_label: label });
+  }
+  window.location.href = authLink;
+}
 
 // Pricing Icon Components
 const CheckIcon = () => (
@@ -226,7 +234,7 @@ export default function PricingPageContent() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const handleSignUp = () => {
-    window.open('https://app.voyage-forge.com/auth', '_blank');
+    navigateToAuth('pricing_start_free');
   };
 
   const toggleFaq = (index: number) => {

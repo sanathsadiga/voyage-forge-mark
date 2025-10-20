@@ -651,12 +651,15 @@ export default function ContactContent() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-6 justify-center"
           >
-            <motion.a
+            <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              href="https://app.voyage-forge.com/auth"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={() => {
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'cta_click', { event_category: 'engagement', event_label: 'contact_cta' });
+                }
+                window.location.href = 'https://app.voyage-forge.com/auth?utm_medium=cta&utm_campaign=contact';
+              }}
               className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 hover:from-amber-500 hover:via-orange-500 hover:to-yellow-500 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -664,7 +667,7 @@ export default function ContactContent() {
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
               </span>
-            </motion.a>
+            </motion.button>
             
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}

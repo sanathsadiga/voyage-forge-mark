@@ -7,6 +7,20 @@ export default function HeroSection() {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
+  const authLink = "https://app.voyage-forge.com/auth";
+
+  function onCTAClick(e: React.MouseEvent) {
+    e.preventDefault();
+    const href = authLink;
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag('event', 'cta_click', {
+        event_category: 'engagement',
+        event_label: 'hero_start_free',
+      });
+    }
+    // small delay to allow analytics to fire
+    setTimeout(() => { window.location.href = href; }, 150);
+  }
 
   return (
     <motion.section
@@ -43,22 +57,22 @@ export default function HeroSection() {
         className="mt-10 flex flex-col sm:flex-row gap-5"
       >
         <motion.a
-          href="https://app.voyage-forge.com/auth"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={authLink}
+          onClick={onCTAClick}
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.98 }}
-          className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 hover:from-amber-500 hover:via-orange-500 hover:to-yellow-500 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 overflow-hidden"
+          className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl overflow-hidden"
         >
+          <span className="mr-3 inline-flex items-center px-2 py-1 text-xs font-semibold bg-white/90 text-black rounded-full">Free</span>
           <span className="relative z-10 flex items-center gap-2">
-            Start Free Trial
+            Start Free - No Card
             <motion.span
               animate={{ x: [0, 4, 0] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              →
+              ➔
             </motion.span>
-          </span>
+          </span> 
           <div className="absolute inset-0 bg-gradient-to-r from-amber-300 to-orange-300 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
         </motion.a>
 
@@ -95,6 +109,12 @@ export default function HeroSection() {
           <span>AI Content</span>
         </div>
       </motion.div>
+      {/* Trust line under CTA */}
+      <div className="mt-4 text-sm text-slate-300/80 flex items-center gap-4 justify-center">
+        <span>Trusted by 500+ travel businesses</span>
+        <span>•</span>
+        <span>No card required</span>
+      </div>
     </motion.section>
   );
 }

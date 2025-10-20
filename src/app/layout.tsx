@@ -1,115 +1,129 @@
 import "./global.css";
 import type { ReactNode } from "react"; // import type
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Script from 'next/script'
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import GoogleAnalytics from './components/GoogleAnalytics'
-import TawkChat from './components/TawkChat'
-import MicrosoftClarity from './components/MicrosoftClarity'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import TawkChat from "./components/TawkChat";
+import MicrosoftClarity from "./components/MicrosoftClarity";
+import ZohoSalesIQ from "./components/ZohoSalesIQ";
 
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
+  display: "swap",
   preload: true,
-  variable: '--font-inter'
-})
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://voyage-forge.com'),
+  metadataBase: new URL("https://voyage-forge.com"),
   title: {
-    default: 'Free Travel Website Builder | Voyage Forge - AI Travel Platform',
-    template: '%s | Voyage Forge - Free Travel Site Builder'
+    default: "Free Travel Website Builder | Voyage Forge - AI Travel Platform",
+    template: "%s | Voyage Forge - Free Travel Site Builder",
   },
-  description: 'Create your FREE travel website with AI content creation! Best free travel site builder for tour operators, agencies & guides. Start building your free travel platform today.',
+  description:
+    "Create your FREE travel website with AI content creation! Best free travel site builder for tour operators, agencies & guides. Start building your free travel platform today.",
   keywords: [
-    'free travel website',
-    'free travel site builder', 
-    'free travel platform',
-    'free AI travel tools',
-    'free travel website builder',
-    'free tour operator software',
-    'free travel agency platform',
-    'AI travel content',
-    'travel platform',
-    'travel technology',
-    'content creation',
-    'travel marketing',
-    'tourism automation',
-    'travel SEO',
-    'AI writing tools',
-    'travel business software',
-    'voyage forge'
+    "free travel website",
+    "free travel site builder",
+    "free travel platform",
+    "free AI travel tools",
+    "free travel website builder",
+    "free tour operator software",
+    "free travel agency platform",
+    "AI travel content",
+    "travel platform",
+    "travel technology",
+    "content creation",
+    "travel marketing",
+    "tourism automation",
+    "travel SEO",
+    "AI writing tools",
+    "travel business software",
+    "voyage forge",
   ],
-  authors: [{ name: 'Voyage Forge Team' }],
-  creator: 'Voyage Forge',
-  publisher: 'Voyage Forge',
+  authors: [{ name: "Voyage Forge Team" }],
+  creator: "Voyage Forge",
+  publisher: "Voyage Forge",
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
     other: [
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+      {
+        url: "/android-chrome-192x192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/android-chrome-512x512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
     ],
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://voyage-forge.com',
-    siteName: 'Voyage Forge',
-    title: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
-    description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides. Create compelling travel content that converts.',
+    type: "website",
+    locale: "en_US",
+    url: "https://voyage-forge.com",
+    siteName: "Voyage Forge",
+    title: "Voyage Forge - AI-Powered Travel Content Creation Platform",
+    description:
+      "AI-powered travel content creation platform for tour operators, travel agencies, and travel guides. Create compelling travel content that converts.",
     images: [
       {
-        url: '/api/og?title=Voyage%20Forge&description=AI-Powered%20Travel%20Platform',
+        url: "/api/og?title=Voyage%20Forge&description=AI-Powered%20Travel%20Platform",
         width: 1200,
         height: 630,
-        alt: 'Voyage Forge - AI-Powered Travel Platform',
+        alt: "Voyage Forge - AI-Powered Travel Platform",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@voyageforge',
-    creator: '@voyageforge',
-    title: 'Voyage Forge - AI-Powered Travel Content Creation Platform',
-    description: 'AI-powered travel content creation platform for tour operators, travel agencies, and travel guides.',
-    images: ['/api/og?title=Voyage%20Forge&description=AI-Powered%20Travel%20Platform'],
+    card: "summary_large_image",
+    site: "@voyageforge",
+    creator: "@voyageforge",
+    title: "Voyage Forge - AI-Powered Travel Content Creation Platform",
+    description:
+      "AI-powered travel content creation platform for tour operators, travel agencies, and travel guides.",
+    images: [
+      "/api/og?title=Voyage%20Forge&description=AI-Powered%20Travel%20Platform",
+    ],
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with actual verification code
+    google: "your-google-verification-code", // Replace with actual verification code
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },
   other: {
-    'facebook-domain-verification': 'qot6amtjy78u01esdzmxndt8a4ok1n',
+    "facebook-domain-verification": "qot6amtjy78u01esdzmxndt8a4ok1n",
   },
   alternates: {
-    canonical: 'https://voyage-forge.com',
+    canonical: "https://voyage-forge.com",
     types: {
-      'application/rss+xml': [
+      "application/rss+xml": [
         {
-          url: '/blog/rss.xml',
-          title: 'Voyage Forge Blog RSS Feed',
+          url: "/blog/rss.xml",
+          title: "Voyage Forge Blog RSS Feed",
         },
       ],
     },
@@ -117,11 +131,11 @@ export const metadata: Metadata = {
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#0F172A',
+  themeColor: "#0F172A",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -140,7 +154,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://vitals.vercel-analytics.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#7c3aed" />
         <meta name="msapplication-TileColor" content="#7c3aed" />
@@ -153,7 +171,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Voyage Forge",
-              description: "Free travel website builder with AI-powered content creation platform for tour operators, travel agencies, and travel guides",
+              description:
+                "Free travel website builder with AI-powered content creation platform for tour operators, travel agencies, and travel guides",
               url: "https://voyage-forge.com",
               logo: "https://voyage-forge.com/vo%20(2).png",
               image: "https://voyage-forge.com/vo%20(2).png",
@@ -162,32 +181,42 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 "@type": "ContactPoint",
                 contactType: "customer service",
                 email: "founder@voyage-forge.com",
-                availableLanguage: "English"
+                availableLanguage: "English",
               },
               sameAs: [
                 "https://twitter.com/voyageforge",
-                "https://linkedin.com/company/voyageforge"
+                "https://linkedin.com/company/voyageforge",
               ],
               applicationCategory: "Travel Technology",
-              operatingSystem: "Web-based"
-            })
+              operatingSystem: "Web-based",
+            }),
           }}
         />
-        
+
         {/* Additional favicon meta tags for better search engine recognition */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#6366f1" />
         <meta name="msapplication-TileColor" content="#6366f1" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
-        {/* Contentsquare global script (added to head as requested) */}
-        <Script
-          src="https://t.contentsquare.net/uxa/f9e30ac7d1de3.js"
-          strategy="afterInteractive"
-        />
+        {/* ContentSquare removed per request (no longer needed) */}
         {/* Zoho SalesIQ widget will be loaded just before </body> to match placement requirements */}
       </head>
       <body className={inter.className}>
@@ -197,12 +226,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <TawkChat />
         <MicrosoftClarity />
 
-  <Analytics />
-  <SpeedInsights />
-  {/* Zoho SalesIQ - placed before closing </body> to match placement instructions */}
-  <Script id="zoho-config-body" strategy="lazyOnload">
-    {`var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"siq61a298e1bd3ba42a2ed191e8f66c1b881676befc45621b7e1d63a78ffd5e31b1", values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.in/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);`}
-  </Script>
+        <Analytics />
+        <SpeedInsights />
+        {/* Zoho SalesIQ: lazy client component (loads on interaction or idle) */}
+        <ZohoSalesIQ />
       </body>
     </html>
   );

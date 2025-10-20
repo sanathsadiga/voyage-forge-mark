@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
                 <h3 style="margin: 0 0 10px 0; font-size: 18px;">Meanwhile, explore Voyage Forge:</h3>
                 <p style="margin: 0 0 15px 0; opacity: 0.9;">Discover how AI can transform your travel business</p>
                 <a href="https://voyage-forge.com/pricing" style="display: inline-block; background: white; color: #0984e3; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-right: 10px;">View Pricing</a>
-                <a href="https://app.voyage-forge.com/auth" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Start Free Trial</a>
+                <a href="https://app.voyage-forge.com/auth?utm_medium=email&utm_campaign=contact" style="display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">Start Free Trial</a>
               </div>
               
               <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
