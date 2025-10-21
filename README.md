@@ -1,37 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Voyage Forge Marketing Site
 
-First, run the development server:
+This is the public-facing marketing site for Voyage Forge, an AI-powered travel platform. Built with Next.js, TypeScript, Tailwind CSS, and deployed on Vercel, it includes landing, pricing, blog, referral, and policy pages, plus integrations for analytics, chat, and email.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework:** Next.js (App Router, SSR/SSG)
+- **Language:** TypeScript, React 19
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Icons:** Lucide React, React Icons
+- **Analytics:** Google Analytics, Vercel Analytics, Microsoft Clarity, Zoho SalesIQ
+- **Email:** Resend API (contact form)
+- **Chat:** Tawk.to live chat widget
+- **Deployment:** Vercel
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Main Folders & File Purposes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app/` — Main Next.js app directory, all routes/pages
+  - `layout.tsx` — Global layout, includes analytics, chat, and shared components
+  - `page.tsx` — Home/landing page
+  - `global.css` — Global styles
+  - `about-us/`, `affiliation/`, `blog/`, `pricing/`, `contact/`, `referral/`, `privacy-policy/`, `refund-policy/`, `terms-conditions/` — Route folders for each main page
+  - `components/` — Shared UI components:
+	 - `Header.tsx`, `Footer.tsx`, `HeroSection.tsx`, `PricingSection.tsx`, `FeaturesSection.tsx`, `TestimonialsSection.tsx`, `FeatureCardsSection.tsx` — Main UI sections
+	 - `TawkChat.tsx` — Tawk.to live chat widget
+	 - `GoogleAnalytics.tsx`, `MicrosoftClarity.tsx`, `ZohoSalesIQ.tsx` — Analytics integrations
+	 - `SEOEnhancer.tsx` — SEO meta tags and structured data
+  - `api/contact/route.ts` — Contact form backend (uses Resend for email)
+  - `blog/[slug]/` — Dynamic blog post pages
+  - `privacy-policy/`, `refund-policy/`, `terms-conditions/` — Legal pages
+- `public/` — Static assets (favicons, images, manifest)
+- `global.d.ts`, `tsconfig.json`, `postcss.config.mjs` — TypeScript and build configs
+- `.env.local.example` — Example environment variables for local setup
+- `package.json` — Project dependencies and scripts
 
-## Learn More
+## How to Clone & Run Locally
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
+	```bash
+	git clone https://github.com/sanathsadiga/voyage-forge-mark.git
+	cd voyage-forge-mark
+	```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+	```bash
+	npm install
+	# or
+	yarn install
+	```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Set up environment variables:**
+	- Copy `.env.local.example` to `.env.local` and fill in any required keys (e.g., Resend API for contact form).
 
-## Deploy on Vercel
+4. **Start the development server:**
+	```bash
+	npm run dev
+	# or
+	yarn dev
+	```
+	- Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to Push Updates to GitHub
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 8780d53 (Initial commit from Create Next App)
+1. **Make your changes locally.**
+2. **Test your changes:**
+	- Run the dev server and verify your updates work as expected.
+	- Check for errors in the browser and terminal.
+3. **Stage and commit your changes:**
+	```bash
+	git add .
+	git commit -m "Describe your changes"
+	```
+4. **Push to GitHub:**
+	```bash
+	git push origin main
+	```
+5. **Notify a developer for review.**
+	- After pushing, ask a team member to verify and approve your changes before merging to production.
+
+## Deployment
+
+- **Platform:** [Vercel](https://vercel.com/)
+- **Production URL:** https://voyage-forge.com
+- **Automatic deploys:** On push to `main` branch.
+
+## Main Routes
+
+- `/` — Home/landing page
+- `/about-us` — About page
+- `/blog` — Blog listing
+- `/blog/[slug]` — Individual blog post
+- `/pricing` — Pricing page
+- `/contact` — Contact form
+- `/referral` — Referral program
+- `/privacy-policy`, `/refund-policy`, `/terms-conditions` — Legal pages
+
+## Environment Variables
+
+- See `.env.local.example` for required keys (e.g., `RESEND_API_KEY` for contact form email).
+
+## Stack Overview
+
+- Next.js 15 (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React, React Icons
+- Resend (email API)
+- Vercel (hosting & analytics)
+
+## Collaborator Notes
+
+- Always test your changes locally before pushing.
+- Use clear commit messages.
+- Ask for a code review before merging to production.
+- Keep `.env.local` private and never commit secrets.
+
+---
+For any questions, reach out to the project maintainer or open an issue on GitHub.
