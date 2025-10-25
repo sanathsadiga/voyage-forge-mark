@@ -193,6 +193,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
 
+        {/* Mailchimp connected script (mcjs) - moved to end of body per Mailchimp verification instructions */}
+
         {/* Additional favicon meta tags for better search engine recognition */}
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link
@@ -230,6 +232,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <SpeedInsights />
         {/* Zoho SalesIQ: lazy client component (loads on interaction or idle) */}
         <ZohoSalesIQ />
+        {/* Mailchimp connected script (mcjs) - placed before closing </body> for Mailchimp verification */}
+        <Script
+          id="mcjs"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/16503c04af4b4f05f66f657e5/06ef96892605bfaef211697a6.js");`,
+          }}
+        />
       </body>
     </html>
   );
