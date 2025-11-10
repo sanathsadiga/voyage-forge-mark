@@ -120,7 +120,7 @@ function FeatureCard({
     <motion.div 
       whileHover={{ scale: 1.05, y: -5 }}
       transition={{ duration: 0.3 }}
-      className={`rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} backdrop-blur-sm p-6 text-white hover:border-white/20 transition-all duration-300 group cursor-pointer`}
+  className={`rounded-2xl border border-white/10 bg-gradient-to-br ${gradient} backdrop-blur-sm p-6 text-white hover:border-white/20 transition-all duration-300 group`}
     >
       <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${gradient} border border-white/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
         <Icon className={`w-6 h-6 ${iconColor} group-hover:rotate-12 transition-transform duration-300`} />

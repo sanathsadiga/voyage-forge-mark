@@ -94,7 +94,8 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.8 }}
-        className="mt-8 flex items-center justify-center gap-8 text-sm text-slate-300/80"
+        className="mt-8 flex items-center justify-center gap-8 text-sm text-slate-300/80 cursor-default"
+        style={{ cursor: 'default' }}
       >
         <div className="flex items-center gap-2">
           <CheckIcon className="w-5 h-5 text-emerald-400" />
