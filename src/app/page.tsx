@@ -157,9 +157,21 @@ export default function Home() {
         <section aria-label="What is Voyage Forge" className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/6">
             <h3 className="text-2xl text-white font-semibold">What is Voyage Forge</h3>
-            <p className="mt-3 text-gray-300 max-w-3xl leading-relaxed">
-              Voyage Forge is an AI-powered travel marketing platform that helps tour operators and travel agencies grow bookings by automating SEO content creation, managing inquiries with a built-in CRM, integrating forms & analytics, and providing booking-ready widgets — available on monthly plans.
-            </p>
+            {/* Enhanced description box */}
+            <div className="mt-3">
+              <div className="p-4 rounded-lg bg-white/3 border-l-4 border-amber-400">
+                <p className="text-lg text-gray-100 leading-relaxed">
+                  <span className="font-semibold text-amber-200">Voyage Forge</span> is an all-in-one platform for tour operators and travel agencies. We provide a <span className="font-medium text-amber-200">website builder</span> with a <span className="font-medium text-amber-200">built-in CRM</span>, <span className="font-medium text-amber-200">AI-powered content writing</span>, <span className="font-medium text-amber-200">automated SEO</span>, <span className="font-medium text-amber-200">booking widgets</span>, and analytics - everything you need to publish faster, measure performance, and convert more bookings without the technical headache.
+                </p>
+                <p className="mt-3 text-sm text-gray-300 flex flex-wrap gap-3">
+                  <span className="inline-block bg-white/5 px-3 py-1 rounded-md text-xs">AI Content</span>
+                  <span className="inline-block bg-white/5 px-3 py-1 rounded-md text-xs">SEO Automation</span>
+                  <span className="inline-block bg-white/5 px-3 py-1 rounded-md text-xs">Booking Widgets</span>
+                  <span className="inline-block bg-white/5 px-3 py-1 rounded-md text-xs">Built-in CRM</span>
+                </p>
+              </div>
+            </div>
+
             <p className="mt-4 text-sm text-gray-400">
               Privacy policy • <a href="/privacy-policy" className="underline">privacy policy</a> • Contact: <a href="mailto:founder@voyage-forge.com" className="underline">founder@voyage-forge.com</a>
             </p>
