@@ -95,7 +95,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={openCalendly}
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 hover:from-amber-500 hover:via-orange-500 hover:to-yellow-500 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 overflow-hidden"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 hover:from-amber-500 hover:via-orange-500 hover:to-yellow-500 text-black font-bold text-lg rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-amber-500/25 overflow-hidden cursor-pointer"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <Phone className="w-5 h-5" />
@@ -114,9 +114,9 @@ export default function Footer() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => navigateToAuth('footer_sign_up')}
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-amber-400/50 text-white font-bold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-amber-400/50 text-white font-bold text-lg rounded-2xl transition-all duration-300 hover:bg-white/10 cursor-pointer"
               >
-                <span className="flex items-center gap-2">
+                <span className="flex items-center gap-2 cursor-pointer">
                   Sign Up
                   <ExternalLink className="w-5 h-5" />
                 </span>

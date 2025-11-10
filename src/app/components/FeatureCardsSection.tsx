@@ -135,7 +135,7 @@ const FeatureCardComponent = ({ feature, index }: FeatureCardProps): ReactElemen
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
       whileHover={{ y: -8, scale: 1.02 }}
-      className={`relative rounded-3xl border border-white/10 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group cursor-pointer`}
+  className={`relative rounded-3xl border border-white/10 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group`}
     >
       {feature.badge && (
         <div className="absolute -top-3 right-6">
