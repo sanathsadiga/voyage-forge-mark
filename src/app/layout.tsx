@@ -18,13 +18,6 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://voyage-forge.com"),
-  title: {
-    default: "Free Travel Website Builder | Voyage Forge - AI Travel Platform",
-    template: "%s | Voyage Forge - Free Travel Site Builder",
-  },
-  description:
-    "Create your FREE travel website with AI content creation! Best free travel site builder for tour operators, agencies & guides. Start building your free travel platform today.",
   keywords: [
     "free travel website",
     "free travel site builder",
@@ -198,6 +191,31 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           id="mcjs"
           dangerouslySetInnerHTML={{
             __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/16503c04af4b4f05f66f657e5/06ef96892605bfaef211697a6.js");`,
+          }}
+        />
+
+        {/* Google tag delayed navigation helper (call gtagSendEvent(url) on click) */}
+        <script
+          id="gtag-send-event-helper"
+          dangerouslySetInnerHTML={{
+            __html: `// Helper function to delay opening a URL until a gtag event is sent.
+function gtagSendEvent(url) {
+  var callback = function () {
+    if (typeof url === 'string') {
+      window.location = url;
+    }
+  };
+  if (typeof gtag === 'function') {
+    gtag('event', 'ads_conversion_About_Us_1', {
+      'event_callback': callback,
+      'event_timeout': 2000
+    });
+  } else {
+    // If gtag isn't available yet, just navigate after a short delay
+    setTimeout(callback, 200);
+  }
+  return false;
+}`
           }}
         />
 
