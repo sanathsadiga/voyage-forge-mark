@@ -21,6 +21,7 @@ Allow: /refund-policy
 Allow: /contact
 Allow: /affiliation
 Allow: /blog/
+Allow: /release-notes/
 
 # Allow favicon and icons
 Allow: /favicon.ico

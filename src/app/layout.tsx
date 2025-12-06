@@ -9,6 +9,7 @@ import GoogleAnalytics from "./components/GoogleAnalytics";
 import TawkChat from "./components/TawkChat";
 import MicrosoftClarity from "./components/MicrosoftClarity";
 import ZohoSalesIQ from "./components/ZohoSalesIQ";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -257,6 +258,8 @@ function gtagSendEvent(url) {
         {/* Zoho SalesIQ: lazy client component (loads on interaction or idle) */}
         <ZohoSalesIQ />
         {/* Mailchimp mcjs moved to the head as a plain script for server-side visibility */}
+        {/* Floating WhatsApp button */}
+        <WhatsAppFloat />
       </body>
     </html>
   );

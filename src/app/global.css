@@ -24,6 +24,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Floating WhatsApp modern pulse-float animation */
+@keyframes floatPulse {
+  0% { transform: translate3d(0,0,0) scale(1); box-shadow: 0 8px 20px rgba(16,185,129,0.3); }
+  25% { transform: translate3d(0,-4px,0) scale(1.02); box-shadow: 0 12px 24px rgba(16,185,129,0.35); }
+  50% { transform: translate3d(0,0,0) scale(1.01); box-shadow: 0 10px 22px rgba(16,185,129,0.32); }
+  75% { transform: translate3d(0,-3px,0) scale(1.015); box-shadow: 0 11px 23px rgba(16,185,129,0.34); }
+  100% { transform: translate3d(0,0,0) scale(1); box-shadow: 0 8px 20px rgba(16,185,129,0.3); }
+}
+
+.animate-floatPulse {
+  animation: floatPulse 2.8s ease-in-out infinite;
+}
+
 /* Disable all animations and motion on mobile for better performance */
 @media (max-width: 768px) {
   * {
@@ -33,6 +46,12 @@ body {
     transition-duration: 0s !important;
     transition-delay: 0s !important;
     transform: none !important;
+  }
+
+  /* Allow subtle animations on floating buttons even on mobile */
+  .animate-floatPulse {
+    animation-duration: 2s !important;
+    animation-iteration-count: infinite !important;
   }
   
   /* Disable Framer Motion animations on mobile */
